@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.parking.adminApp" version="0.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.parking.adminApp" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="dev@duduche.me" href="http://duduche.me">
         DUDUCHE@2015
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
 </widget>
