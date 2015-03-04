@@ -63,6 +63,7 @@
         </config-file>
 
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
+        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/device" />
     </platform>
 
     <!-- amazon-fireos -->
@@ -74,6 +75,7 @@
         </config-file>
 
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
+        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/device" />
     </platform>
     
     <!-- ubuntu -->
@@ -95,6 +97,8 @@
 
         <header-file src="src/ios/CDVDevice.h" />
         <source-file src="src/ios/CDVDevice.m" />
+        <header-file src="src/ios/AppDelegate+notification.h" />
+        <source-file src="src/ios/AppDelegate+notification.m" />
     </platform>
 
     <!-- blackberry10 -->

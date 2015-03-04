@@ -44,6 +44,9 @@
         },
         "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.parking.adminApp"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.parking.adminApp"
         }
     },
     "dependent_plugins": {}

@@ -16,15 +16,33 @@
  specific language governing permissions and limitations
  under the License.
  */
-
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Cordova/CDV.h>
 #import <Cordova/CDVPlugin.h>
 
 @interface CDVDevice : CDVPlugin
-{}
+{
+    NSDictionary *notificationMessage;
+    BOOL    isInline;
+    NSString *token;
+}
 
-+ (NSString*)cordovaVersion;
 
-- (void)getDeviceInfo:(CDVInvokedUrlCommand*)command;
+@property (nonatomic, copy) NSString *callbackId;
+@property (nonatomic, copy) NSString *token;
+@property (nonatomic, strong) NSDictionary *notificationMessage;
+@property BOOL                          isInline;
+
+//+ (NSString*)cordovaVersion;
+
+//- (void)getDeviceInfo:(CDVInvokedUrlCommand*)command;
+
+- (void)getPushID:(CDVInvokedUrlCommand*)command;
+- (void)setCallback:(CDVInvokedUrlCommand*)command;
+	
+- (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
+- (void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
+- (void)notificationReceived;
+
 
 @end
