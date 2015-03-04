@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F291A748-A24E-4183-AD4C-21F7A3F7B377</string>
+	<key>IDESourceControlProjectName</key>
+	<string>嘟嘟停车</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>37578FBFD4EAAE117A1163636C2A10C8CAAE0087</key>
+		<string>https://github.com/DuDuParking/ddpacker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>driverApp/platforms/ios/嘟嘟停车.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>37578FBFD4EAAE117A1163636C2A10C8CAAE0087</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DuDuParking/ddpacker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>37578FBFD4EAAE117A1163636C2A10C8CAAE0087</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>37578FBFD4EAAE117A1163636C2A10C8CAAE0087</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ddpacker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
