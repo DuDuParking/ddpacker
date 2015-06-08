@@ -22,6 +22,8 @@ package com.parking.adminApp;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
+import com.flurry.android.FlurryAgent;
+
 public class CordovaApp extends CordovaActivity
 {
     @Override
@@ -32,4 +34,20 @@ public class CordovaApp extends CordovaActivity
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }
+    
+    @Override
+	  protected void onStart()
+	  {
+	    super.onStart();
+	    
+	    FlurryAgent.setCaptureUncaughtExceptions(true);
+	    FlurryAgent.onStartSession(this, "WHJD8G3ZJR5TVTBBKRSX");
+	  }
+	
+	  @Override
+	  protected void onStop()
+	  {
+	    super.onStop();
+	    FlurryAgent.onEndSession(this);
+	  }
 }

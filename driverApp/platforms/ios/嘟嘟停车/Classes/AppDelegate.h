@@ -29,7 +29,9 @@
 
 #import <Cordova/CDVViewController.h>
 
-@interface AppDelegate : NSObject <UIApplicationDelegate>{}
+#import "WXApi.h"
+
+@interface AppDelegate : NSObject <UIApplicationDelegate,WXApiDelegate>{}
 
 // invoke string is passed to your app on launch, this is only valid if you
 // edit 嘟嘟停车-Info.plist to add a protocol

@@ -34,6 +34,12 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="FlurryPlugin">
+        <param name="ios-package" value="FlurryPlugin" />
+    </feature>
+    <feature name="Pgwxpay">
+        <param name="ios-package" value="Pgwxpay" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

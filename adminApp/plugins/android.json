@@ -19,6 +19,14 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.GeoBroker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FlurryPlugin\"><param name=\"android-package\" value=\"com.phonegap.plugins.flurry.Flurry\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -28,7 +36,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
+                            "count": 2
                         }
                     ]
                 }
@@ -46,6 +54,9 @@
             "PACKAGE_NAME": "com.parking.adminApp"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.parking.adminApp"
+        },
+        "com.phonegap.plugins.flurry": {
             "PACKAGE_NAME": "com.parking.adminApp"
         }
     },

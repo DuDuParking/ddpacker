@@ -42,6 +42,13 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.flurry/www/flurry.js",
+        "id": "com.phonegap.plugins.flurry.Flurry",
+        "clobbers": [
+            "Flurry"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -50,7 +57,8 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.14-dev",
     "org.apache.cordova.dudu.gexin": "0.2.14-dev",
     "org.apache.cordova.inappbrowser": "0.5.4",
-    "org.apache.cordova.network-information": "0.2.14"
+    "org.apache.cordova.network-information": "0.2.14",
+    "com.phonegap.plugins.flurry": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

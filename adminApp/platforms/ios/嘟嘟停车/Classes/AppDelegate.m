@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.m
-//  ParkingAdmin
+//  嘟嘟停车
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
@@ -29,6 +29,7 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -87,12 +88,17 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [Flurry setCrashReportingEnabled:YES];
+    //[Flurry setShowErrorInLogEnabled:YES];
+		//[Flurry setDebugLogEnabled:YES];
+    [Flurry startSession:@"Q68P8YCRFPV4R628K8QT"];
 
     return YES;
 }
 
 // this happens while we are running ( in the background, or from within our own app )
-// only valid if ParkingAdmin-Info.plist specifies a protocol to handle
+// only valid if 嘟嘟停车-Info.plist specifies a protocol to handle
 - (BOOL)application:(UIApplication*)application openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation
 {
     if (!url) {

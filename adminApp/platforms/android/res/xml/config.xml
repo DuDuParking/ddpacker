@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.parking.adminApp" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.parking.adminApp" version="0.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.dudu.gexin.Device" />
@@ -10,7 +10,13 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <name>嘟嘟停车</name>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+    <feature name="FlurryPlugin">
+        <param name="android-package" value="com.phonegap.plugins.flurry.Flurry" />
+    </feature>
+    <name>嘟嘟停车管理员</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">
         DUDUCHE@2015
@@ -18,4 +24,5 @@
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
+    <preference name="Orientation" value="portrait" />
 </widget>

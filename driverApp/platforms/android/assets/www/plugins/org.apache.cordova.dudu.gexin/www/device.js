@@ -24,6 +24,8 @@ var argscheck = require('cordova/argscheck'),
     utils = require('cordova/utils'),
     exec = require('cordova/exec'),
     cordova = require('cordova');
+    
+window.device_sys = window.device;
 
 channel.createSticky('onCordovaInfoReady');
 // Tell cordova channel to wait on the CordovaInfoReady event
@@ -59,6 +61,8 @@ function Device() {
         });
         channel.onCordovaInfoReady.fire();
     });
+    
+    console.log('module.exports = new Device();');
 }
 
 /**

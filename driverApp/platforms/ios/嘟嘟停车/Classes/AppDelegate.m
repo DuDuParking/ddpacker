@@ -29,6 +29,9 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
+#import "Flurry.h"
+#import "payRequsestHandler.h"
+#import "Pgwxpay.h"
 
 @implementation AppDelegate
 
@@ -87,6 +90,13 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [Flurry setCrashReportingEnabled:YES];
+    //[Flurry setShowErrorInLogEnabled:YES];
+		//[Flurry setDebugLogEnabled:YES];
+    [Flurry startSession:@"FWTPVQJ3J3MC8NBK37QD"];
+    
+    [WXApi registerApp:APP_ID withDescription:@"weixin pay"];
 
     return YES;
 }
@@ -104,7 +114,23 @@
     // all plugins will get the notification, and their handlers will be called
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 
-    return YES;
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (void)onResp:(BaseResp *)resp
+{
+    if ([resp isKindOfClass:[PayResp class]])
+    {
+        PayResp *response = (PayResp *)resp;
+        
+        [Pgwxpay onResult:response.errCode];
+        
+    }
 }
 
 // repost all remote and local notification using the default NSNotificationCenter so multiple plugins may respond

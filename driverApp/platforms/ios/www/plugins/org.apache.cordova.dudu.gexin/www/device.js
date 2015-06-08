@@ -61,6 +61,8 @@ function Device() {
         });
         channel.onCordovaInfoReady.fire();
     });
+    
+    console.log('module.exports = new Device();');
 }
 
 /**

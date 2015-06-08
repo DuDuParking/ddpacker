@@ -23,6 +23,14 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FlurryPlugin\"><param name=\"ios-package\" value=\"FlurryPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -56,6 +64,9 @@
             "PACKAGE_NAME": "com.parking.adminApp"
         },
         "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.parking.adminApp"
+        },
+        "com.phonegap.plugins.flurry": {
             "PACKAGE_NAME": "com.parking.adminApp"
         }
     },

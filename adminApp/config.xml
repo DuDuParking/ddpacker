@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.parking.adminApp" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>嘟嘟停车</name>
+<widget id="com.parking.adminApp" version="0.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>嘟嘟停车管理员</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">
         DUDUCHE@2015

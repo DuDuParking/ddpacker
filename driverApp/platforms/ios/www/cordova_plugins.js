@@ -70,6 +70,20 @@ module.exports = [
         "clobbers": [
             "navigator.geolocation"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.flurry/www/flurry.js",
+        "id": "com.phonegap.plugins.flurry.Flurry",
+        "clobbers": [
+            "Flurry"
+        ]
+    },
+    {
+        "file": "plugins/com.phonegap.weixin/www/pgwxpay.js",
+        "id": "com.phonegap.weixin.Pgwxpay",
+        "clobbers": [
+            "Pgwxpay"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -79,7 +93,9 @@ module.exports.metadata =
     "org.apache.cordova.inappbrowser": "0.5.4",
     "org.apache.cordova.network-information": "0.2.14",
     "org.apache.cordova.console": "0.2.14-dev",
-    "org.apache.cordova.geolocation": "0.3.12"
+    "org.apache.cordova.geolocation": "0.3.12",
+    "com.phonegap.plugins.flurry": "1.0.0",
+    "com.phonegap.weixin": "0.2.14"
 }
 // BOTTOM OF METADATA
 });

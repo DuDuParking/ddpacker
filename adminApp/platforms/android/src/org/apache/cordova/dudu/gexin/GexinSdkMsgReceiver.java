@@ -25,14 +25,18 @@ public class GexinSdkMsgReceiver extends BroadcastReceiver {
 			if (payload != null) {
 				String data = new String(payload);
 				Log.i("GexinSdkDemo", "Got Payload:" + data);
-                Device.device.onMsgData(data);
+				if(Device.device != null){
+          Device.device.onMsgData(data);
+        }
 			}
 			break;
 		case PushConsts.GET_CLIENTID:
                 // 获取ClientID(CID)
                 // 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
                 pushid = bundle.getString("clientid");
-                Device.device.onPushID(pushid);
+                if(Device.device != null){
+                	Device.device.onPushID(pushid);
+                }
 			break;
 		default:
 			break;

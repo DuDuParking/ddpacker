@@ -45,7 +45,7 @@ public class Device extends CordovaPlugin {
 //    private static final String AMAZON_PLATFORM = "amazon-fireos";
 //    private static final String AMAZON_DEVICE = "Amazon";
     
-    public static Device device;
+    public static Device device = null;
     
     private CallbackContext callback = null;
 
