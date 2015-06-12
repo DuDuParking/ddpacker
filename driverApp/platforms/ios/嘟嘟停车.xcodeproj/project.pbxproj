@@ -59,6 +59,7 @@
 		D8C9E3E61ADD3A5F007E2962 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9E3E51ADD3A5F007E2962 /* Foundation.framework */; };
 		D8C9E3EB1ADD3CC1007E2962 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9E3E81ADD3CC1007E2962 /* libWeChatSDK.a */; };
 		DD71C5DADA764CC8A4244E7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98461BF418E4206912567ED /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,8 @@
 		F859D0BE6DE2417E96E477E7 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		FA1F59423B6348BFAAE42C08 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
 		FC67604D29BC457AA3767EE9 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
+		E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LaunchNavigator.m"; path = "uk.co.workingedge.phonegap.plugin.LaunchNavigator/LaunchNavigator.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A400B66810124D7D86D445B1 /* LaunchNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LaunchNavigator.h"; path = "uk.co.workingedge.phonegap.plugin.LaunchNavigator/LaunchNavigator.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +299,8 @@
 				7890DED5E8E747FB97672CA4 /* FlurryPlugin.m */,
 				4988F14B8340400FAE2EDD6B /* Flurry.h */,
 				9D36EBEF174F40C0BDD85ACB /* FlurryPlugin.h */,
+				E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */,
+				A400B66810124D7D86D445B1 /* LaunchNavigator.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -507,6 +512,7 @@
 				D8C9E3DA1ADD370C007E2962 /* payRequsestHandler.mm in Sources */,
 				C9F0BE9CFA8945AAA43DECF5 /* FlurryPlugin.m in Sources */,
 				D8C9E3D51ADD36E4007E2962 /* WXUtil.mm in Sources */,
+				C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

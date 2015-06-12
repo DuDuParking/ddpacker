@@ -40,6 +40,9 @@
     <feature name="Pgwxpay">
         <param name="ios-package" value="Pgwxpay" />
     </feature>
+    <feature name="LaunchNavigator">
+        <param name="ios-package" value="LaunchNavigator" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

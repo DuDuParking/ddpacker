@@ -42,6 +42,13 @@ module.exports = [
         "clobbers": [
             "Pgwxpay"
         ]
+    },
+    {
+        "file": "plugins/uk.co.workingedge.phonegap.plugin.LaunchNavigator/www/android/launchnavigator.js",
+        "id": "uk.co.workingedge.phonegap.plugin.LaunchNavigator.LaunchNavigator",
+        "clobbers": [
+            "launchnavigator"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -53,7 +60,8 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.14-dev",
     "org.apache.cordova.geolocation": "0.3.12",
     "com.phonegap.plugins.flurry": "1.0.0",
-    "com.phonegap.weixin": "0.2.14"
+    "com.phonegap.weixin": "0.2.14",
+    "uk.co.workingedge.phonegap.plugin.LaunchNavigator": "2.6.0"
 }
 // BOTTOM OF METADATA
 });

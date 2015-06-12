@@ -19,6 +19,9 @@
     <feature name="Pgwxpay">
         <param name="android-package" value="com.phonegap.weixin.Pgwxpay" />
     </feature>
+    <feature name="LaunchNavigator">
+        <param name="android-package" value="uk.co.workingedge.phonegap.plugin.LaunchNavigator" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

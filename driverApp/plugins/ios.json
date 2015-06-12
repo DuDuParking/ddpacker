@@ -35,6 +35,10 @@
                         {
                             "xml": "<feature name=\"Pgwxpay\"><param name=\"ios-package\" value=\"Pgwxpay\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigator\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -93,6 +97,9 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "com.phonegap.weixin": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },
