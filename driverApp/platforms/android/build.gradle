@@ -37,7 +37,21 @@ android {
     }
 
     defaultConfig {
-        versionCode Integer.parseInt("" + getVersionCodeFromManifest() + "0")
+        versionCode 100001
+        versionName "1.0.0"
+    }
+
+    packer {
+        // 指定渠道打包输出目录
+        archiveOutput = file(new File(project.rootProject.buildDir.path, "apks"))
+        // 指定渠道打包输出文件名格式
+        archiveNameFormat = 'dudu_parking-${flavorName}-${buildType}-v${versionName}-${versionCode}'
+        // 指定渠道打包需要修改的AndroidManifest文件项
+        manifestMatcher = ['UMENG_CHANNEL']
+        // 指定是否使用build版本号自增
+        buildNumberAuto = true
+        // 指定使用版本号自增的buildType，默认是全部
+        buildNumberTypeMatcher = ['release', 'beta']
     }
 
     signingConfigs {
@@ -46,6 +60,27 @@ android {
             storePassword '00000000'
             keyPassword '00000000'
             keyAlias 'Duduche'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            manifestPlaceholders = [amapApiKey:"1457617180d69f00165553372e49a706"
+                                    , getuiAppId:"PBLtzwG2Jc6ZlKk0SSbuA4"
+                                    , getuiAppKey:"jSZKbTvHyV8OoSFktiSgnA"
+                                    , getuiAppSecret:"hLwW3loWa28qxz9iLJImL4"
+            ]
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            manifestPlaceholders = [amapApiKey:"ab36fbd57e5a12d545664c3d48136a30"
+                                    , getuiAppId:"PBLtzwG2Jc6ZlKk0SSbuA4"
+                                    , getuiAppKey:"jSZKbTvHyV8OoSFktiSgnA"
+                                    , getuiAppSecret:"hLwW3loWa28qxz9iLJImL4"
+            ]
         }
     }
 
@@ -77,6 +112,13 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 
 }
