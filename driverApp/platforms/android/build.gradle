@@ -40,6 +40,15 @@ android {
         versionCode Integer.parseInt("" + getVersionCodeFromManifest() + "0")
     }
 
+    signingConfigs {
+        release {
+            storeFile file('my-release-key.jks')
+            storePassword '00000000'
+            keyPassword '00000000'
+            keyAlias 'Duduche'
+        }
+    }
+
     compileSdkVersion 19
     buildToolsVersion "19.1.0"
 
