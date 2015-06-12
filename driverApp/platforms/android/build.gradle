@@ -1,6 +1,7 @@
 import java.util.regex.Pattern
 
 apply plugin: 'android'
+apply plugin: 'packer'
 
 buildscript {
     repositories {
@@ -9,6 +10,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.0+'
+        classpath 'com.mcxiaoke.gradle:packer:1.0.+'
     }
 }
 
