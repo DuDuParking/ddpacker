@@ -92,7 +92,22 @@
                 width: 100%;
                 height: 100%;
             }
-
+        .startpage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            font-size: 48px;
+            text-align: center;
+            z-index: 10000;
+            background: #1e88e5 url(./img/logo@2x.png) no-repeat center;
+            background-size: 150px 250px;
+            font-size: 0;
+        }
+        .mui-bar-footer {
+            color:#98cfff;
+        }
 		</style>
 	</head>
 
@@ -101,11 +116,14 @@
         <iframe id="iframe1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" style="display:none;" src=""></iframe>
         <iframe id="iframe2" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
         <iframe id="iframe3" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-        <iframe id="iframe4" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-        <iframe id="iframe5" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
     </div>
 <nav class="mui-bar mui-bar-tab">
 </nav>
+<div id="startpage" class="startpage">
+    嘟嘟停车
+    <p class="mui-bar-footer">duduche.me</p>
+</div>
+
 </body>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
@@ -160,6 +178,21 @@
         app.initialize();
     </script>
     <script>
-        document.write('<script type="text/javascript" src="http://t.duduche.me/html/userhtml/js/index.js?'+(new Date-0)+'"><'+'/script>');
+    function loadIndexjs(){
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src ='http://t.duduche.me/html/userhtml/js/index.js?'+(new Date-0);
+        script.async = true;
+        script.onerror=function(){
+            $('#startpage p').html('您的网络好像不给力哦～<br>请检查网络状况，然后点击屏幕重新加载');
+            $('#startpage').unbind().click(function(){
+                $('#startpage p').html('');
+                $('#startpage').unbind();
+                document.body.removeChild(script);loadIndexjs();//retry
+            });
+        };
+        document.body.appendChild(script);
+    }
+    loadIndexjs();
     </script>
 </html>

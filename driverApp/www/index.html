@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
 <html>
-
-	<head>
-		<meta charset="utf-8">
-		<title>嘟嘟停车</title>
-        <script>
-            /**
-             * Created by Common on 14-9-12.
-             */
+    
+    <head>
+        <meta charset="utf-8">
+            <title>嘟嘟停车</title>
+            <script>
+                /**
+                 * Created by Common on 14-9-12.
+                 */
             var deviceAgent = navigator.userAgent.toLowerCase();
             var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/) || '';
             var mobile = {
@@ -28,85 +28,103 @@
                 //alert('other');
                 document.write('<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=0,minimal-ui">');
             }
-        </script>
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-		<link rel="stylesheet" href="./css/mui.min.css">
-		<!--<script src="./js/mui.min.js"></script>-->
-		<!--<script src="./js/app.js"></script>-->
-		<style>
-			html,body {
-				background-color: #efeff4;
-                height: 100%;
-			}
-            .mui-control-content h3 {
-            		padding-top: 100px;
-            		text-align: center;
-            	}
-            .contaion{
-                display: box;
-                display: -webkit-box;
-                display: -moz-box;
-                -moz-box-orient: vertical;
-                -webkit-box-orient: vertical;
-                box-orient: vertical;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            .contaion>.mui-bar{
-                width: 100%;
-                height: 50px;
-                /*-moz-box-flex: 1;*/
-                /*-webkit-box-flex: 1;*/
-                /*box-flex: 1;*/
-                position: relative;
-                overflow: hidden;
-            }
-            .contaion>.body{
-                -moz-box-flex: 2;
-                -webkit-box-flex: 2;
-                box-flex: 2;
-                position: relative;
-                transition: all .5s;
-                -moz-transition: all .5s;
-                -webkit-transition: all .5s;
-                -o-transition: all .5s;
-            }
-            .contaion>*{
-                width: 100%;
-                -moz-box-flex: auto;
-                -webkit-flex: auto;
-                -ms-flex: auto;
-                flex: auto;
-                height: auto;
-
-            }
-            .contaion>.body>iframe{
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-		</style>
-	</head>
-
-	<body class="contaion">
-    <div class="body">
-        <iframe id="iframe1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" style="display:none;" src=""></iframe>
-        <iframe id="iframe2" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-        <iframe id="iframe3" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-        <iframe id="iframe4" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-        <iframe id="iframe5" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
-    </div>
-<nav class="mui-bar mui-bar-tab">
-</nav>
-</body>
+            </script>
+            <meta name="apple-mobile-web-app-capable" content="yes">
+                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                    
+                    <link rel="stylesheet" href="./css/mui.min.css">
+                        <!--<script src="./js/mui.min.js"></script>-->
+                        <!--<script src="./js/app.js"></script>-->
+                        <style>
+                            html,body {
+                                background-color: #efeff4;
+                                height: 100%;
+                            }
+                        .mui-control-content h3 {
+                            padding-top: 100px;
+                            text-align: center;
+                        }
+                        .contaion{
+                            display: box;
+                            display: -webkit-box;
+                            display: -moz-box;
+                            -moz-box-orient: vertical;
+                            -webkit-box-orient: vertical;
+                            box-orient: vertical;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                        .contaion>.mui-bar{
+                            width: 100%;
+                            height: 50px;
+                            /*-moz-box-flex: 1;*/
+                            /*-webkit-box-flex: 1;*/
+                            /*box-flex: 1;*/
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .contaion>.body{
+                            -moz-box-flex: 2;
+                            -webkit-box-flex: 2;
+                            box-flex: 2;
+                            position: relative;
+                            transition: all .5s;
+                            -moz-transition: all .5s;
+                            -webkit-transition: all .5s;
+                            -o-transition: all .5s;
+                        }
+                        .contaion>*{
+                            width: 100%;
+                            -moz-box-flex: auto;
+                            -webkit-flex: auto;
+                            -ms-flex: auto;
+                            flex: auto;
+                            height: auto;
+                            
+                        }
+                        .contaion>.body>iframe{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .startpage {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            font-size: 48px;
+                            text-align: center;
+                            z-index: 10000;
+                            background: #1e88e5 url(./img/logo@2x.png) no-repeat center;
+                            background-size: 150px 250px;
+                            font-size: 0;
+                        }
+                        .mui-bar-footer {
+                            color:#98cfff;
+                        }
+                        </style>
+                        </head>
+    
+    <body class="contaion">
+        <div class="body">
+            <iframe id="iframe1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" style="display:none;" src=""></iframe>
+            <iframe id="iframe2" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
+            <iframe id="iframe3" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" src=""></iframe>
+        </div>
+        <nav class="mui-bar mui-bar-tab">
+        </nav>
+        <div id="startpage" class="startpage">
+            嘟嘟停车
+            <p class="mui-bar-footer">duduche.me</p>
+        </div>
+        
+    </body>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script>
@@ -123,8 +141,8 @@
             bindEvents: function() {
                 var me = this;
                 document.addEventListener('deviceready', function(){
-                    me.onDeviceReady();
-                }, false);
+                                          me.onDeviceReady();
+                                          }, false);
             },
             // deviceready Event Handler
             //
@@ -134,7 +152,7 @@
                 //初始化device
                 //navigator.geolocation.getCurrentPosition(onSuccess, onError);
                 this.onMyEVENT();
-
+                
                 //app.receivedEvent('deviceready');
             }
             ,onMyEVENT:function(){
@@ -142,24 +160,39 @@
             }
             // Update DOM on a Received Event
             /**
-            ,receivedEvent: function(id) {
-                var parentElement = document.getElementById(id);
-                var listeningElement = parentElement.querySelector('.listening');
-                var receivedElement = parentElement.querySelector('.received');
-
-                listeningElement.setAttribute('style', 'display:none;');
-                receivedElement.setAttribute('style', 'display:block;');
-
-                receivedElement.innerHTML = 'Received Event: ' + id;
-
-                console.log('Received Event: ' + id);
-            },*/
-
+             ,receivedEvent: function(id) {
+             var parentElement = document.getElementById(id);
+             var listeningElement = parentElement.querySelector('.listening');
+             var receivedElement = parentElement.querySelector('.received');
+             
+             listeningElement.setAttribute('style', 'display:none;');
+             receivedElement.setAttribute('style', 'display:block;');
+             
+             receivedElement.innerHTML = 'Received Event: ' + id;
+             
+             console.log('Received Event: ' + id);
+             },*/
+            
         };
-
-        app.initialize();
-    </script>
+    
+    app.initialize();
+        </script>
     <script>
-        document.write('<script type="text/javascript" src="http://static.duduche.me/redirect/user/indexjs.php?'+(new Date-0)+'"><'+'/script>');
-    </script>
+        function loadIndexjs(){
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src ='http://static.duduche.me/redirect/user/indexjs.php?'+(new Date-0);
+            script.async = true;
+            script.onerror=function(){
+                $('#startpage p').html('您的网络好像不给力哦～<br>请检查网络状况，然后点击屏幕重新加载');
+                $('#startpage').unbind().click(function(){
+                                               $('#startpage p').html('');
+                                               $('#startpage').unbind();
+                                               document.body.removeChild(script);loadIndexjs();//retry
+                                               });
+            };
+            document.body.appendChild(script);
+        }
+    loadIndexjs();
+        </script>
 </html>
