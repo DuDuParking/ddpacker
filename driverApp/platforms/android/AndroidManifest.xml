@@ -21,13 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="PUSH_APPID" android:value="dpEB6vgxrFABEctm95ZsB3" />
-        <meta-data android:name="PUSH_APPKEY" android:value="SmksDDicdNA2GtpF4l7Sc5" />
-        <meta-data android:name="PUSH_APPSECRET" android:value="Zfmh9i23v39JkqtfG2gYT6" />
+        <meta-data android:name="PUSH_APPID" android:value="${getuiAppId}" />
+        <meta-data android:name="PUSH_APPKEY" android:value="${getuiAppKey}" />
+        <meta-data android:name="PUSH_APPSECRET" android:value="${getuiAppSecret}" />
         <meta-data android:name="PUSH_GROUPID" android:value="" />
         <receiver android:exported="false" android:name="org.apache.cordova.dudu.gexin.GexinSdkMsgReceiver">
             <intent-filter>
-                <action android:name="com.igexin.sdk.action.dpEB6vgxrFABEctm95ZsB3" />
+                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
             </intent-filter>
         </receiver>
         <service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
@@ -58,7 +58,7 @@
         <receiver android:exported="false" android:name="com.igexin.getuiext.service.PayloadReceiver">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-                <action android:name="com.igexin.sdk.action.dpEB6vgxrFABEctm95ZsB3" />
+                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
             </intent-filter>
         </receiver>
         <service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice" />

@@ -67,17 +67,17 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
-            manifestPlaceholders = [ getuiAppId:"dpEB6vgxrFABEctm95ZsB3"
-                                    , getuiAppKey:"SmksDDicdNA2GtpF4l7Sc5"
-                                    , getuiAppSecret:"Zfmh9i23v39JkqtfG2gYT6"
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                    , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                    , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
             ]
         }
         debug {
             minifyEnabled false
             debuggable true
-            manifestPlaceholders = [ getuiAppId:"dpEB6vgxrFABEctm95ZsB3"
-                                     , getuiAppKey:"SmksDDicdNA2GtpF4l7Sc5"
-                                     , getuiAppSecret:"Zfmh9i23v39JkqtfG2gYT6"
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
             ]
         }
     }
