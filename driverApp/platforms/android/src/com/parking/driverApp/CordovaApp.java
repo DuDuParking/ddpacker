@@ -25,6 +25,7 @@ import org.apache.cordova.*;
 
 import com.flurry.android.FlurryAgent;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 public class CordovaApp extends CordovaActivity {
     @Override
@@ -42,10 +43,12 @@ public class CordovaApp extends CordovaActivity {
         FlurryAgent.setCaptureUncaughtExceptions(true);
         FlurryAgent.onStartSession(this, "WG6F24XTXTVTP2J4ZDFN");
 
-
         // Umeng Analytics
         MobclickAgent.setDebugMode(BuildConfig.DEBUG);
         MobclickAgent.onResume(this);
+
+        // Umeng Update Service
+        UmengUpdateAgent.update(this);
     }
 
     @Override
