@@ -31,4 +31,7 @@
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <preference name="Orientation" value="portrait" />
+    <feature name="UmengAnalytics">
+        <param name="android-package" value="com.qiudao.cordova.umeng.UmengAnalytics" />
+    </feature>
 </widget>

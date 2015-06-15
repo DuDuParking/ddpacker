@@ -35,6 +35,10 @@
                         {
                             "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"uk.co.workingedge.phonegap.plugin.LaunchNavigator\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UmengAnalytics\"><param name=\"android-package\" value=\"com.qiudao.cordova.umeng.UmengAnalytics\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -60,6 +64,44 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"UMENG_APPKEY\" android:value=\"@string/umeng_android_id\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"UMENG_CHANNEL\" android:value=\"Android\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/umeng.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"umeng_android_id\">557e369667e58e56cd0015a9</string>",
                             "count": 1
                         }
                     ]
@@ -90,6 +132,11 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "com.qiudao.cordova.umeng-analytics": {
+            "UMENG_IOS_ID": "557e378167e58e85f9000eba",
+            "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

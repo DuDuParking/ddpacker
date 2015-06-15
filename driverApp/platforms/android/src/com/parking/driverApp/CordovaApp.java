@@ -20,34 +20,39 @@
 package com.parking.driverApp;
 
 import android.os.Bundle;
+
 import org.apache.cordova.*;
 
 import com.flurry.android.FlurryAgent;
+import com.umeng.analytics.MobclickAgent;
 
-public class CordovaApp extends CordovaActivity
-{
+public class CordovaApp extends CordovaActivity {
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.init();
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }
-    
+
     @Override
-	  protected void onStart()
-	  {
-	    super.onStart();
-	    
-	    FlurryAgent.setCaptureUncaughtExceptions(true);
-	    FlurryAgent.onStartSession(this, "WG6F24XTXTVTP2J4ZDFN");
-	  }
-	
-	  @Override
-	  protected void onStop()
-	  {
-	    super.onStop();
-	    FlurryAgent.onEndSession(this);
-	  }
+    protected void onStart() {
+        super.onStart();
+
+        FlurryAgent.setCaptureUncaughtExceptions(true);
+        FlurryAgent.onStartSession(this, "WG6F24XTXTVTP2J4ZDFN");
+
+
+        // Umeng Analytics
+        MobclickAgent.setDebugMode(BuildConfig.DEBUG);
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        FlurryAgent.onEndSession(this);
+
+        MobclickAgent.onPause(this);
+    }
 }
