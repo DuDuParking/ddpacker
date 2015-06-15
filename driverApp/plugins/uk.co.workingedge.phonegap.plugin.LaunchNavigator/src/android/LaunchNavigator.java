@@ -41,19 +41,16 @@ import android.util.Log;
 public class LaunchNavigator extends CordovaPlugin {
 
 	private static final String LOG_TAG = "LaunchNavigator";
-	private static final String NO_GOOGLE_NAVIGATOR = "No Activity found to handle Intent";
 
 	@Override
 	public boolean execute(String action, JSONArray args,
 		CallbackContext callbackContext) throws JSONException {
 		boolean result;
 
+		Log.d(LOG_TAG, action);
+
 		if ("navigate".equals(action)){
 			result = this.navigate(args, callbackContext);
-		}else if ("navigateByLatLon".equals(action)){
-			result = this.navigateByLatLon(args, callbackContext);
-		} else if ("navigateByPlaceName".equals(action)){
-			result = this.navigateByPlaceName(args, callbackContext);
 		}else {
 			Log.e(LOG_TAG, "Invalid action");
 			result = false;
@@ -68,50 +65,29 @@ public class LaunchNavigator extends CordovaPlugin {
 	private boolean navigate(JSONArray args, CallbackContext callbackContext){
 		boolean result;
 		try {
-			String destination;
-			String start = null;
-			
-			String dType = args.getString(0);
-			if(dType.equals("pos")){
-				JSONArray pos = args.getJSONArray(1);
+			String slat = "", slon = "", dlat = "", dlon = "";
 
-				String dLat = pos.getString(0);
-	        	String dLon = pos.getString(1);
-				if (dLat == null || dLat.length() == 0 || dLon == null || dLon.length() == 0) {
-					Log.e(LOG_TAG, "Expected two non-empty string arguments for destination lat/lon." );
-					return false;
-	            }
-				destination = dLat + "," + dLon;
-			}else{
-				String dName = args.getString(1);
-				if (dName == null || dName.length() == 0) {
-					Log.e(LOG_TAG, "Expected non-empty string argument for destination name." );
-		        	return false;
-		        }
-				destination = dName;
-			}
-			
-			String sType = args.getString(2);
-			if(sType.equals("pos")){
-				JSONArray pos = args.getJSONArray(3);
+			String type = args.getString(0);
 
-				String sLat = pos.getString(0);
-	        	String sLon = pos.getString(1);
-				if (sLat == null || sLat.length() == 0 || sLon == null || sLon.length() == 0) {
-					Log.e(LOG_TAG, "Expected two non-empty string arguments for start lat/lon." );
-					return false;
-	            }
-				start = sLat + "," + sLon;
-			}else if(sType.equals("name")){
-				String sName = args.getString(3);
-				if (sName == null || sName.length() == 0) {
-					Log.e(LOG_TAG, "Expected non-empty string argument for start name." );
-		        	return false;
-		        }
-				start = sName;
+			JSONArray pos = args.optJSONArray(1);
+			JSONArray pos2 = args.optJSONArray(2);
+
+			if (null != pos && null != pos2) {
+				dlat = pos.getString(0);
+				dlon = pos.getString(1);
+
+				slat = pos2.getString(0);
+				slon = pos2.getString(1);
+
+				result = this.doNavigate(type, slat, slon, dlat, dlon, callbackContext);
+			} else if (null != pos) {
+				dlat = pos.getString(0);
+				dlon = pos.getString(1);
+
+				result = this.doViewMap(type, dlat, dlon, callbackContext);
+			} else {
+				result = false;
 			}
-			
-			result = this.doNavigate(destination, start, callbackContext);
 
 		}catch( JSONException e ) {
 			Log.e(LOG_TAG, "Exception occurred: ".concat(e.getMessage()));
@@ -119,74 +95,80 @@ public class LaunchNavigator extends CordovaPlugin {
 		}
         return result;
     }
-	
-	private boolean navigateByLatLon(JSONArray args, CallbackContext callbackContext){
-		boolean result;
-		try {
-			String lat = args.getString(0);
-        	String lon = args.getString(1);
 
-        	if (lat != null && lat.length() > 0 && lon != null && lon.length() > 0) {
-        		result = this.doNavigate(lat +","+ lon, null, callbackContext);
-            } else {
-            	Log.e(LOG_TAG, "Expected two non-empty string arguments for 'lat' and 'lon'." );
-            	result = false;
-            }
-		}catch( JSONException e ) {
-			Log.e(LOG_TAG, "Exception occurred: ".concat(e.getMessage()));
-        	result = false;
-		}
-        return result;
-    }
-	
-	private boolean navigateByPlaceName(JSONArray args, CallbackContext callbackContext){
-		boolean result;
-		try {
-			String name = args.getString(0);
-	    	if (name != null && name.length() > 0) {
-	            result = this.doNavigate(name, null, callbackContext);
-	        } else {
-	        	Log.e(LOG_TAG, "Expected non-empty string argument for 'name'." );
-	        	result = false;
-	        }
-		}catch( JSONException e ) {
-			Log.e(LOG_TAG, "Exception occurred: ".concat(e.getMessage()));
-        	result = false;
-		}
-		
-        return result;
-    }
-	
-	private boolean doNavigate(String destination, String start, CallbackContext callbackContext){
-		boolean result;
-		try {
-			String logMsg = "Navigating to "+destination;
-			String url;
 
-			if(start != null){
-				logMsg += " from " + start;
-				url = "http://maps.google.com/maps?daddr=" + destination + "&saddr=" + start;
-			}else{
-				logMsg += " from current location";
-				url = "google.navigation:q=" + destination;
+	private boolean doViewMap(String type, String dlat, String dlon, CallbackContext callbackContext){
+		boolean result;
+		try {
+			if (type.equals("baidu")) {
+				String url = String.format("bdapp://map/marker?location=%s,%s&title=%s&content=%s&coord_type=gcj02&src=duduche|parking"
+						, dlat, dlon, dlat + "," + dlon, dlat + "," + dlon);
+				Log.d(LOG_TAG, url);
+				Uri uri = Uri.parse(url);
+				Intent intent = new Intent("android.intent.action.VIEW", uri);
+				intent.setPackage("com.baidu.BaiduMap");
+				this.cordova.getActivity().startActivity(intent);
+				result = true;
+			} else if (type.equals("amap")) {
+				String url = String.format("androidamap://viewMap?sourceApplication=duduche&lat=%s&lon=%s&poiname=%s&dev=0"
+						, dlat, dlon, dlat + "," + dlon);
+				Log.d(LOG_TAG, url);
+				Uri uri = Uri.parse(url);
+				Intent intent = new Intent("android.intent.action.VIEW", uri);
+				intent.setPackage("com.autonavi.minimap");
+				this.cordova.getActivity().startActivity(intent);
+
+				result = true;
+			} else {
+				String msg = "Invalid type.";
+				callbackContext.error(msg);
+				result = false;
 			}
-			Log.d(LOG_TAG, logMsg);
-			
-	        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-	        if(start != null){
-	        	intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
-	        }
-	        this.cordova.getActivity().startActivity(intent);
-	        result = true;
 		}catch( Exception e ) {
 			String msg = e.getMessage();
-			if(msg.contains(NO_GOOGLE_NAVIGATOR)){
-				msg = "Google Navigator app is not installed on this device";
+			Log.e(LOG_TAG, "Exception occurred: ".concat(msg));
+			callbackContext.error(msg);
+			result = false;
+		}
+
+		return result;
+	}
+
+
+	private boolean doNavigate(String type, String slat, String slon, String dlat, String dlon, CallbackContext callbackContext){
+		boolean result;
+		try {
+			if (type.equals("baidu")) {
+				String url = String.format("bdapp://map/direction?origin=%s,%s&destination=%s,%s&coord_type=gcj02&mode=driving&src=duduche|parking"
+						, slat, slon, dlat, dlon);
+				Log.d(LOG_TAG, url);
+				Uri uri = Uri.parse(url);
+				Intent intent = new Intent("android.intent.action.VIEW", uri);
+				intent.setPackage("com.baidu.BaiduMap");
+				this.cordova.getActivity().startActivity(intent);
+				result = true;
+			} else if (type.equals("amap")) {
+				String url = String.format("androidamap://route?sourceApplication=duduche&slat=%s&slon=%s&sname=%s&dlat=%s&dlon=%s&dname=%s&dev=0&m=0&t=2"
+						, slat, slon, slat + "," + slon, dlat, dlon, dlat + "," + dlon);
+				Log.d(LOG_TAG, url);
+				Uri uri = Uri.parse(url);
+				Intent intent = new Intent("android.intent.action.VIEW", uri);
+				intent.setPackage("com.autonavi.minimap");
+				this.cordova.getActivity().startActivity(intent);
+
+				result = true;
+			} else {
+				String msg = "Invalid type.";
+				callbackContext.error(msg);
+				result = false;
 			}
+		}catch( Exception e ) {
+			String msg = e.getMessage();
 			Log.e(LOG_TAG, "Exception occurred: ".concat(msg));
 			callbackContext.error(msg);
         	result = false;
 		}
+
         return result;
 	}
 

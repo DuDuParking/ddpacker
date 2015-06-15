@@ -1,4 +1,4 @@
-cordova.define("uk.co.workingedge.phonegap.plugin.LaunchNavigator.LaunchNavigator", function(require, exports, module) { /*
+/*
  * Copyright (c) 2014 Dave Alden  (http://github.com/dpa99c)
  * Copyright (c) 2014 Working Edge Ltd. (http://www.workingedge.co.uk)
  *
@@ -54,5 +54,5 @@ launchnavigator.navigate = function(type, destination, start, successCallback, e
 };
 
 module.exports = launchnavigator;
+console.log('module.exports = launchnavigator;');
 
-});
