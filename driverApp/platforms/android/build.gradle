@@ -56,10 +56,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('my-release-key.jks')
-            storePassword '00000000'
-            keyPassword '00000000'
-            keyAlias 'Duduche'
+            storeFile file('my-release-key.keystore')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'my-release-key.keystore'
         }
     }
 
