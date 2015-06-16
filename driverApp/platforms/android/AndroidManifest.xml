@@ -9,25 +9,26 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="getui.permission.GetuiService.com.parking.driverApp" />
     <permission android:name="getui.permission.GetuiService.com.parking.driverApp" android:protectionLevel="normal">
     </permission>
-    <application android:debuggable="false" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
+    <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="CordovaApp" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="PUSH_APPID" android:value="dpEB6vgxrFABEctm95ZsB3" />
-        <meta-data android:name="PUSH_APPKEY" android:value="SmksDDicdNA2GtpF4l7Sc5" />
-        <meta-data android:name="PUSH_APPSECRET" android:value="Zfmh9i23v39JkqtfG2gYT6" />
+        <meta-data android:name="PUSH_APPID" android:value="${getuiAppId}" />
+        <meta-data android:name="PUSH_APPKEY" android:value="${getuiAppKey}" />
+        <meta-data android:name="PUSH_APPSECRET" android:value="${getuiAppSecret}" />
         <meta-data android:name="PUSH_GROUPID" android:value="" />
         <receiver android:exported="false" android:name="org.apache.cordova.dudu.gexin.GexinSdkMsgReceiver">
             <intent-filter>
-                <action android:name="com.igexin.sdk.action.dpEB6vgxrFABEctm95ZsB3" />
+                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
             </intent-filter>
         </receiver>
         <service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
@@ -58,13 +59,19 @@
         <receiver android:exported="false" android:name="com.igexin.getuiext.service.PayloadReceiver">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-                <action android:name="com.igexin.sdk.action.dpEB6vgxrFABEctm95ZsB3" />
+                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
             </intent-filter>
         </receiver>
         <service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice" />
         <activity android:exported="true" android:launchMode="singleTop" android:name=".wxapi.WXPayEntryActivity" />
+        <meta-data android:name="UMENG_APPKEY" android:value="@string/umeng_android_id" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="Android" />
+        <service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+        </service>
+        <activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
     </application>
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19" />
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />

@@ -35,6 +35,18 @@
                         {
                             "xml": "<feature name=\"Pgwxpay\"><param name=\"ios-package\" value=\"Pgwxpay\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigator\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UmengAnalytics\"><param name=\"ios-package\" value=\"UmengAnalytics\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"UmengIOSAppId\" value=\"557e378167e58e85f9000eba\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -56,6 +68,12 @@
                     "CoreLocation.framework": [
                         {
                             "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": true,
                             "count": 1
                         }
                     ]
@@ -93,6 +111,14 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "com.phonegap.weixin": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "com.qiudao.cordova.umeng-analytics": {
+            "UMENG_IOS_ID": "557e378167e58e85f9000eba",
+            "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

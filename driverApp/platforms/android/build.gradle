@@ -1,6 +1,7 @@
 import java.util.regex.Pattern
 
 apply plugin: 'android'
+apply plugin: 'packer'
 
 buildscript {
     repositories {
@@ -8,7 +9,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.10.+'
+        classpath 'com.android.tools.build:gradle:1.1.0+'
+        classpath 'com.mcxiaoke.gradle:packer:1.0.+'
     }
 }
 
@@ -35,11 +37,53 @@ android {
     }
 
     defaultConfig {
-        versionCode Integer.parseInt("" + getVersionCodeFromManifest() + "0")
+        versionCode 100002
+        versionName "1.0.0"
+    }
+
+    packer {
+        // 指定渠道打包输出目录
+        archiveOutput = file(new File(project.rootProject.buildDir.path, "apks"))
+        // 指定渠道打包输出文件名格式
+        archiveNameFormat = 'dudu_parking-${flavorName}-${buildType}-v${versionName}-${versionCode}'
+        // 指定渠道打包需要修改的AndroidManifest文件项
+        manifestMatcher = ['UMENG_CHANNEL']
+        // 指定是否使用build版本号自增
+        buildNumberAuto = true
+        // 指定使用版本号自增的buildType，默认是全部
+        buildNumberTypeMatcher = ['release', 'beta']
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('my-release-key.jks')
+            storePassword '00000000'
+            keyPassword '00000000'
+            keyAlias 'Duduche'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                    , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                    , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
+            ]
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
+            ]
+        }
     }
 
     compileSdkVersion 19
-    buildToolsVersion "19.0.0"
+    buildToolsVersion "19.1.0"
 
     if (multiarch || System.env.BUILD_MULTIPLE_APKS) {
         productFlavors {
@@ -66,6 +110,13 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 
 }
