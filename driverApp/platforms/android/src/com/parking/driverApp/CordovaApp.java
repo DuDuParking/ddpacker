@@ -32,10 +32,12 @@ public class CordovaApp extends CordovaActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.init();
-        // Set by <content src="index.html" /> in config.xml
+
         if (BuildConfig.DEBUG) {
             appView.clearCache(true);
+            launchUrl = launchUrl.replace("index", "index_debug");
         }
+
         loadUrl(launchUrl);
     }
 

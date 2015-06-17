@@ -1,5 +1,10 @@
-fir#fir.im
+bd#baidu
+91#91.com
 360#360.cn
-xiaomi#app.mi.com
-myapp#myapp.com
+mi#app.mi.com
+wdj#wandoujia
+yyb#myapp.com
+tb#taobao.com
+fir#fir.im
+play#google play
 direct#duduche.me
