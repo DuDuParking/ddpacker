@@ -167,6 +167,7 @@
                 window.onPushID && window.onPushID(data);
             }
             ,onMsgData: function(data) {
+                console.log('app.onMsgData:'+data);
                 app.msgdata = data;
                 window.onMsgData && window.onMsgData(data);
             }
