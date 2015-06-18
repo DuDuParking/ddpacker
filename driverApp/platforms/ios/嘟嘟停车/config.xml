@@ -31,9 +31,6 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
     <feature name="FlurryPlugin">
         <param name="ios-package" value="FlurryPlugin" />
     </feature>
@@ -48,6 +45,9 @@
         <param name="onload" value="true" />
     </feature>
     <preference name="UmengIOSAppId" value="557e378167e58e85f9000eba" />
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

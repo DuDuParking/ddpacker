@@ -20,6 +20,8 @@
 package com.parking.driverApp;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 import org.apache.cordova.*;
 
@@ -35,7 +37,7 @@ public class CordovaApp extends CordovaActivity {
 
         if (BuildConfig.DEBUG) {
             appView.clearCache(true);
-            launchUrl = launchUrl.replace("index", "index_debug");
+            launchUrl = launchUrl.replace("index", "t.index");
         }
 
         loadUrl(launchUrl);
@@ -62,5 +64,22 @@ public class CordovaApp extends CordovaActivity {
         FlurryAgent.onEndSession(this);
 
         MobclickAgent.onPause(this);
+    }
+
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.text_quit_app), Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

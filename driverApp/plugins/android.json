@@ -51,19 +51,19 @@
                             "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
                     ],
@@ -122,9 +122,6 @@
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "org.apache.cordova.geolocation": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.phonegap.plugins.flurry": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
@@ -137,6 +134,9 @@
         "com.qiudao.cordova.umeng-analytics": {
             "UMENG_IOS_ID": "557e378167e58e85f9000eba",
             "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

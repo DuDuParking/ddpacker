@@ -1,10 +1,8 @@
-bd#baidu
-91#91.com
+bd#shouji.baidu.com
 360#360.cn
 mi#app.mi.com
-wdj#wandoujia
+wdj#wandoujia.com
 yyb#myapp.com
-tb#taobao.com
-fir#fir.im
-play#google play
+tb#app.taobao.com
 direct#duduche.me
+fir#fir.im

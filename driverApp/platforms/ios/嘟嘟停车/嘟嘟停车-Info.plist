@@ -77,8 +77,6 @@
     <string>0.1.2</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string></string>
     <key>UILaunchImages</key>
     <array>
       <dict>
@@ -196,5 +194,7 @@
     <array>
       <string>UIInterfaceOrientationPortrait</string>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string></string>
   </dict>
 </plist>
