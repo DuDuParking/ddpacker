@@ -150,28 +150,26 @@
             // function, we must explicitly call 'app.receivedEvent(...);'
             onDeviceReady: function() {
                 //初始化device
+                device.onPushID = app.onPushID;
+                device.onMsgData = app.onMsgData;
+                
                 //navigator.geolocation.getCurrentPosition(onSuccess, onError);
                 this.onMyEVENT();
-
+                
                 //app.receivedEvent('deviceready');
             }
             ,onMyEVENT:function(){
                 window.cordova_onDeviceReady = true;        //准备完毕
             }
-            // Update DOM on a Received Event
-            /**
-            ,receivedEvent: function(id) {
-                var parentElement = document.getElementById(id);
-                var listeningElement = parentElement.querySelector('.listening');
-                var receivedElement = parentElement.querySelector('.received');
-
-                listeningElement.setAttribute('style', 'display:none;');
-                receivedElement.setAttribute('style', 'display:block;');
-
-                receivedElement.innerHTML = 'Received Event: ' + id;
-
-                console.log('Received Event: ' + id);
-            },*/
+            ,onPushID: function(data) {
+                console.log('app.pushid:'+data);
+                app.pushid = data;
+                window.onPushID && window.onPushID(data);
+            }
+            ,onMsgData: function(data) {
+                app.msgdata = data;
+                window.onMsgData && window.onMsgData(data);
+            }
 
         };
 
