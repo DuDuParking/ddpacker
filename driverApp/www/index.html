@@ -100,7 +100,7 @@
                             top: 0;
                             font-size: 48px;
                             text-align: center;
-                            z-index: 10000;
+                            z-index: 999;
                             background: #1e88e5 url(./img/logo@2x.png) no-repeat center;
                             background-size: 150px 250px;
                             font-size: 0;
@@ -108,6 +108,7 @@
                         .mui-bar-footer {
                             color:#98cfff;
                         }
+                        .tips-loading {background:rgba(0,0,0,.5) url(./img/loading.gif) no-repeat center; background-size:64px 64px; width:120px; height:100px; border-radius:6px; position:absolute; top:75%; left:50%; margin-top:-50px; margin-left:-60px; z-index:1000;}
                         </style>
                         </head>
     
@@ -184,7 +185,9 @@
             script.async = true;
             script.onerror=function(){
                 $('#startpage p').html('您的网络好像不给力哦～<br>请检查网络状况，然后点击屏幕重新加载');
+                $('#loading').hide();
                 $('#startpage').unbind().click(function(){
+                                               $('#loading').show();
                                                $('#startpage p').html('');
                                                $('#startpage').unbind();
                                                document.body.removeChild(script);loadIndexjs();//retry
