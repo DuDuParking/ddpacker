@@ -20,12 +20,14 @@
 package com.parking.driverApp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
 import org.apache.cordova.*;
 
 import com.flurry.android.FlurryAgent;
+import com.igexin.sdk.PushManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -41,6 +43,10 @@ public class CordovaApp extends CordovaActivity {
         }
 
         loadUrl(launchUrl);
+
+        Log.i("GexinSdkDemo", "initializing sdk...");
+        //MessageManager.getInstance().initialize(cordova.getActivity().getApplicationContext());
+        PushManager.getInstance().initialize(this.getApplicationContext());
     }
 
     @Override
