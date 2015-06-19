@@ -72,6 +72,15 @@ android {
                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
             ]
         }
+        beta {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            debuggable true
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
+            ]
+        }
         debug {
             minifyEnabled false
             debuggable true
