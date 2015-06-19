@@ -196,7 +196,7 @@
 
         navigator.geolocation.getCurrentPosition(function(pos) {}, function(err) {
             alert('无法获取当前位置，请开启设备定位功能 #' + err.code);
-        } , { timeout: 5000, enableHighAccuracy: true });
+        } , { timeout: 10000, enableHighAccuracy: true });
 
         </script>
 </html>
