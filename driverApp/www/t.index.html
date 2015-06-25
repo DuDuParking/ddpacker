@@ -130,7 +130,8 @@
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script>
-        window.cordova_onDeviceReady = false;       //是否执行了cordova准备事件
+        window.cordova_onDeviceReady = false;
+               //是否执行了cordova准备事件
         var app = {
             // Application Constructor
             initialize: function() {
@@ -197,11 +198,8 @@
         };
         document.body.appendChild(script);
     }
-    loadIndexjs();
 
-        navigator.geolocation.getCurrentPosition(function(pos) {}, function(err) {
-            alert('无法获取当前位置，请开启设备定位功能 #' + err.code);
-        } , { timeout: 10000, enableHighAccuracy: true });
+    loadIndexjs();
 
 </script>
 </html>
