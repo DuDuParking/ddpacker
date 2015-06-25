@@ -43,15 +43,18 @@ function Device() {
     var me = this;
 
     channel.onCordovaReady.subscribe(function() {
+        channel.onCordovaInfoReady.fire();
+        
         me.setCallback(function(info) {
             //ignoring info.cordova returning from native, we should use value from cordova.version defined in cordova.js
             //TODO: CB-5105 native implementations should not return info.cordova
                 console.log('Received Callback: ' + info.evt + "," + info.data);
                 
                 if(info.evt == "pushid"){
-                    if(me.onPushID != null){
-                       me.onPushID(info.data);
-                    }
+                    setTimeout(function(){
+                    console.log('me.onPushID');
+                    if(me.onPushID != null){me.onPushID(info.data);}
+                 },1000);
                 }
                 else if(info.evt == "msg"){
                     if(me.onMsgData != null){
@@ -59,7 +62,6 @@ function Device() {
                     }
                 }
         });
-        channel.onCordovaInfoReady.fire();
     });
     
     console.log('module.exports = new Device();');

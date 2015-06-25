@@ -125,7 +125,7 @@
             嘟嘟停车
             <p class="mui-bar-footer">duduche.me</p>
         </div>
-        
+        <div id="loading" class="tips-loading"></div>
     </body>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
@@ -151,6 +151,7 @@
             // The scope of 'this' is the event. In order to call the 'receivedEvent'
             // function, we must explicitly call 'app.receivedEvent(...);'
             onDeviceReady: function() {
+                console.log('onDeviceReady');
                 //初始化device
                 device.onPushID = app.onPushID;
                 device.onMsgData = app.onMsgData;
