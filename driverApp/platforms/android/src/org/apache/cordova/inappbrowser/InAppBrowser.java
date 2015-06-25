@@ -584,6 +584,7 @@ public class InAppBrowser extends CordovaPlugin {
                 inAppWebView.setWebViewClient(client);
                 WebSettings settings = inAppWebView.getSettings();
                 settings.setJavaScriptEnabled(true);
+                settings.setGeolocationEnabled(true);
                 settings.setJavaScriptCanOpenWindowsAutomatically(true);
                 settings.setBuiltInZoomControls(true);
                 settings.setPluginState(android.webkit.WebSettings.PluginState.ON);
