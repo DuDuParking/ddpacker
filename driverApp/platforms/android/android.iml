@@ -81,11 +81,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="GetuiSdk2.5.0.0" level="project" />
     <orderEntry type="library" exported="" name="flurryAnalytics_3.4.0" level="project" />
     <orderEntry type="library" exported="" name="libammsdk" level="project" />
     <orderEntry type="library" exported="" name="GetuiExt-2.0.3" level="project" />
     <orderEntry type="library" exported="" name="umeng-analytics-v5.4.2" level="project" />
-    <orderEntry type="library" exported="" name="GetuiSdk2.4.1.0" level="project" />
     <orderEntry type="library" exported="" name="umeng-update-v2.6.0.1" level="project" />
     <orderEntry type="module" module-name="CordovaLib" exported="" />
   </component>

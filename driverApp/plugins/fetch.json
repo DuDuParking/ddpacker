@@ -18,5 +18,13 @@
             "UMENG_IOS_ID": "557e378167e58e85f9000eba",
             "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9"
         }
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

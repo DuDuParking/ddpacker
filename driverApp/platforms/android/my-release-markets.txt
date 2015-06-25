@@ -1,5 +1,8 @@
-fir#fir.im
+bd#shouji.baidu.com
 360#360.cn
-xiaomi#app.mi.com
-myapp#myapp.com
+mi#app.mi.com
+wdj#wandoujia.com
+yyb#myapp.com
+tb#app.taobao.com
 direct#duduche.me
+fir#fir.im

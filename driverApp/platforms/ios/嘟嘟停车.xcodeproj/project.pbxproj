@@ -27,7 +27,6 @@
 		30B4F30219D5E07200D9F7D8 /* Default-Landscape-736h.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B4F2FF19D5E07200D9F7D8 /* Default-Landscape-736h.png */; };
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
-		37C3CFFBCF944869AACB9DE2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162380CFDDCA45D791FE7C8D /* CoreLocation.framework */; };
 		3FA3CBFFD49E49698AFBBFCD /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5272603BBB184BC3849F3E19 /* CDVInAppBrowser.m */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		64F875768DE946D3BD1DC89E /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 36473B8D310C46379FCB36F9 /* CDVReachability.m */; };
@@ -45,7 +44,6 @@
 		B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D8EA172AD4E5C8B829D18 /* CDVLogger.m */; };
 		B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67604D29BC457AA3767EE9 /* CDVConnection.m */; };
 		C9F0BE9CFA8945AAA43DECF5 /* FlurryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890DED5E8E747FB97672CA4 /* FlurryPlugin.m */; };
-		CA1B04D2C4234592B3AAB907 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C38DF5C2CF2C4245A2D77A9D /* CDVLocation.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D8AC8B7A1A9F6C31006CF793 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AC8B791A9F6C31006CF793 /* AppDelegate+notification.m */; };
 		D8B0DBAC1ABEC5E200B4D00E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B0DBAB1ABEC5E200B4D00E /* Security.framework */; };
@@ -62,6 +60,7 @@
 		C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */; };
 		F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D401762C48B5986A18B0 /* AppDelegate+UmengAnalytics.m */; };
 		3275DE3CAB1B4DF4842C7181 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A546DBB29654F51BF4007E7 /* libMobClickLibrary.a */; };
+		92B292803B3C4618900A282B /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 930286EB4A4D4BB09276D066 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +166,8 @@
 		436DE962D4484171BC6DA73A /* AppDelegate+UmengAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+UmengAnalytics.h"; path = "com.qiudao.cordova.umeng-analytics/AppDelegate+UmengAnalytics.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		6D6D4E5E277949EC9020AAE5 /* MobClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MobClick.h"; path = "com.qiudao.cordova.umeng-analytics/MobClick.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		0D90621AA38A45B8B5668251 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MobClickSocialAnalytics.h"; path = "com.qiudao.cordova.umeng-analytics/MobClickSocialAnalytics.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		930286EB4A4D4BB09276D066 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		0EF8F50E85D349B1B5A815D5 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +186,6 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				DD71C5DADA764CC8A4244E7B /* SystemConfiguration.framework in Frameworks */,
-				37C3CFFBCF944869AACB9DE2 /* CoreLocation.framework in Frameworks */,
 				3275DE3CAB1B4DF4842C7181 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +314,8 @@
 				436DE962D4484171BC6DA73A /* AppDelegate+UmengAnalytics.h */,
 				6D6D4E5E277949EC9020AAE5 /* MobClick.h */,
 				0D90621AA38A45B8B5668251 /* MobClickSocialAnalytics.h */,
+				930286EB4A4D4BB09276D066 /* CDVLocation.m */,
+				0EF8F50E85D349B1B5A815D5 /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -521,12 +523,12 @@
 				B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */,
 				64F875768DE946D3BD1DC89E /* CDVReachability.m in Sources */,
 				B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */,
-				CA1B04D2C4234592B3AAB907 /* CDVLocation.m in Sources */,
 				D8C9E3DA1ADD370C007E2962 /* payRequsestHandler.mm in Sources */,
 				C9F0BE9CFA8945AAA43DECF5 /* FlurryPlugin.m in Sources */,
 				D8C9E3D51ADD36E4007E2962 /* WXUtil.mm in Sources */,
 				C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */,
 				F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */,
+				92B292803B3C4618900A282B /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,10 +56,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('my-release-key.jks')
-            storePassword '00000000'
-            keyPassword '00000000'
-            keyAlias 'Duduche'
+            storeFile file('my-release-key.keystore')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'my-release-key.keystore'
         }
     }
 
@@ -70,6 +70,15 @@ android {
             manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
+            ]
+        }
+        beta {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            debuggable true
+            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
+                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
+                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
             ]
         }
         debug {

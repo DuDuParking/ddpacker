@@ -20,10 +20,14 @@
 package com.parking.driverApp;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 import org.apache.cordova.*;
 
 import com.flurry.android.FlurryAgent;
+import com.igexin.sdk.PushManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -32,11 +36,17 @@ public class CordovaApp extends CordovaActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.init();
-        // Set by <content src="index.html" /> in config.xml
+
         if (BuildConfig.DEBUG) {
             appView.clearCache(true);
+            launchUrl = launchUrl.replace("index", "t.index");
         }
+
         loadUrl(launchUrl);
+
+        Log.i("GexinSdkDemo", "initializing sdk...");
+        //MessageManager.getInstance().initialize(cordova.getActivity().getApplicationContext());
+        PushManager.getInstance().initialize(this.getApplicationContext());
     }
 
     @Override
@@ -60,5 +70,22 @@ public class CordovaApp extends CordovaActivity {
         FlurryAgent.onEndSession(this);
 
         MobclickAgent.onPause(this);
+    }
+
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.text_quit_app), Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

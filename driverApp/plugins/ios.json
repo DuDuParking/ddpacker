@@ -25,10 +25,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"FlurryPlugin\"><param name=\"ios-package\" value=\"FlurryPlugin\" /></feature>",
                             "count": 1
                         },
@@ -46,6 +42,10 @@
                         },
                         {
                             "xml": "<preference name=\"UmengIOSAppId\" value=\"557e378167e58e85f9000eba\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -68,6 +68,10 @@
                     "CoreLocation.framework": [
                         {
                             "xml": "false",
+                            "count": 1
+                        },
+                        {
+                            "xml": false,
                             "count": 1
                         }
                     ],
@@ -104,9 +108,6 @@
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "org.apache.cordova.geolocation": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.phonegap.plugins.flurry": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
@@ -119,6 +120,9 @@
         "com.qiudao.cordova.umeng-analytics": {
             "UMENG_IOS_ID": "557e378167e58e85f9000eba",
             "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

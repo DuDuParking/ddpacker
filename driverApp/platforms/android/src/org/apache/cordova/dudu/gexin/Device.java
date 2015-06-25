@@ -67,10 +67,6 @@ public class Device extends CordovaPlugin {
 //        Device.uuid = getUuid();
         
         device = this;
-        
-		Log.i("GexinSdkDemo", "initializing sdk...");
-		//MessageManager.getInstance().initialize(cordova.getActivity().getApplicationContext());
-		PushManager.getInstance().initialize(cordova.getActivity().getApplicationContext());
     }
     
     public void onPushID(String pushid){
