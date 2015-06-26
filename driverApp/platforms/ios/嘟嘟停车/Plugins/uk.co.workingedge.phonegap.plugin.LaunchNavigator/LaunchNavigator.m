@@ -52,6 +52,9 @@ NSLog((@"[objc]: " fmt), ##__VA_ARGS__); \
     NSString *backButtonText = [command.arguments objectAtIndex:4];
     BOOL enableDebug = [[command argumentAtIndex:5] boolValue];
     
+    NSLog(@"%@", start);
+        NSLog(@"%@", destination);
+    
     if(enableDebug == TRUE){
         debugEnabled = enableDebug;
         DLog(@"Debug mode enabled");
@@ -89,15 +92,17 @@ NSLog((@"[objc]: " fmt), ##__VA_ARGS__); \
         if (preferGoogleMaps){
             DLog(@"Google Maps not supported on this device.");
         }
-        
+        // https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
         protocol = @"http://maps.apple.com/?";
     }
     
-    directionsRequest = [NSString stringWithFormat:@"%@daddr=%@%@", protocol, destination, callbackParams];
+//    directionsRequest = [NSString stringWithFormat:@"%@daddr=%@%@", protocol, destination, callbackParams];
     
-    if(![start isEqual:[NSNull null]]){
-        directionsRequest = [NSString stringWithFormat:@"%@&saddr=%@", directionsRequest, start];
-    }
+//    if(![start isEqual:[NSNull null]]){
+//        directionsRequest = [NSString stringWithFormat:@"%@&saddr=%@", directionsRequest, start];
+//    }
+    
+    directionsRequest = [NSString stringWithFormat:@"%@q=%@", protocol, destination];
     
     DLog(@"Opening URL: %@", directionsRequest);
 
