@@ -32,6 +32,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;   
 import org.xmlpull.v1.XmlPullParser;
 
+import com.parking.driverApp.BuildConfig;
 import com.tencent.mm.sdk.modelpay.PayReq;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -64,6 +65,11 @@ public class Pgwxpay extends CordovaPlugin  {
 	}
 	
 	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) {
+
+		if (BuildConfig.DEBUG) {
+			Toast.makeText(cordova.getActivity(), "调试模式下无法完成支付", Toast.LENGTH_LONG).show();
+		}
+
 		if(wxpay == null){
 			wxpay = this;
 		}
@@ -90,7 +96,7 @@ public class Pgwxpay extends CordovaPlugin  {
 				req.sign = cityad.optString("sign");
 				
 				Toast.makeText(cordova.getActivity(), "正在调起微信支付", Toast.LENGTH_SHORT).show();
-		
+
 				callback = callbackContext;
 				msgApi.sendReq(req);
 				return true; 
