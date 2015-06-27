@@ -132,6 +132,7 @@
     <script>
         window.cordova_onDeviceReady = false;       //是否执行了cordova准备事件
         var app = {
+            channel: "360",
             // Application Constructor
             initialize: function() {
                 this.bindEvents();
@@ -183,7 +184,7 @@
         function loadIndexjs(){
             var script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src ='http://static.duduche.me/redirect/user/indexjs.php?'+(new Date-0);
+            script.src ='http://static.duduche.me/redirect/user/indexjs.php?channel=360&'+(new Date-0);
             script.async = true;
             script.onerror=function(){
                 $('#startpage p').html('您的网络好像不给力哦～<br>请检查网络状况，然后点击屏幕重新加载');
