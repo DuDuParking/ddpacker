@@ -124,6 +124,9 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "me.duduche.cordova.plugins.amaplocation": {
+            "PACKAGE_NAME": "com.parking.driverApp"
         }
     },
     "dependent_plugins": {}

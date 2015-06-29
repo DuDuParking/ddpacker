@@ -19,7 +19,6 @@
 
 package com.parking.driverApp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -89,4 +88,5 @@ public class CordovaApp extends CordovaActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

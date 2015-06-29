@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"UmengAnalytics\"><param name=\"android-package\" value=\"com.qiudao.cordova.umeng.UmengAnalytics\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AmapLocation\"><param name=\"android-package\" value=\"me.duduche.cordova.plugins.amaplocation\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -48,7 +52,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
+                            "count": 3
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
@@ -56,14 +60,34 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CHANGE_CONFIGURATION\" />",
                             "count": 1
                         }
                     ],
@@ -92,6 +116,10 @@
                         },
                         {
                             "xml": "<meta-data android:name=\"UMENG_CHANNEL\" android:value=\"Android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.amap.api.v2.apikey\" android:value=\"请输入您的用户Key\" />",
                             "count": 1
                         }
                     ]
@@ -137,6 +165,9 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "me.duduche.cordova.plugins.amaplocation": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

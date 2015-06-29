@@ -26,5 +26,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "me.duduche.cordova.plugins.amaplocation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova_amap_sdk_location.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
