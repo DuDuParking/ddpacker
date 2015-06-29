@@ -44,8 +44,8 @@ android {
     }
 
     defaultConfig {
-        versionCode 101001
-        versionName "1.1.1"
+        versionCode 101002
+        versionName "1.1.2"
     }
 
     packer {
