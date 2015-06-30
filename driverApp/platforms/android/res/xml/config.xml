@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.parking.driverApp" version="0.1.2"
-    xmlns="http://www.w3.org/ns/widgets"
-    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.parking.driverApp" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.dudu.gexin.Device" />
@@ -27,6 +25,9 @@
     <feature name="UmengAnalytics">
         <param name="android-package" value="com.qiudao.cordova.umeng.UmengAnalytics" />
     </feature>
+    <feature name="AmapLocation">
+        <param name="android-package" value="me.duduche.cordova.plugins.amaplocation.AmapLocation" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">
@@ -36,7 +37,4 @@
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <preference name="Orientation" value="portrait" />
-    <feature name="AmapLocation">
-        <param name="android-package" value="me.duduche.cordova.plugins.amaplocation.AmapLocation" />
-    </feature>
 </widget>
