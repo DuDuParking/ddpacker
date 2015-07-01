@@ -4,4 +4,8 @@ mi#app.mi.com
 wdj#wandoujia.com
 yyb#myapp.com
 tb#app.taobao.com
+huawei#huawei
+oppo#oppo
+lenovo#lenovo
+meizu#meizu
 direct#duduche.me
