@@ -8,4 +8,5 @@ huawei#huawei
 oppo#oppo
 lenovo#lenovo
 meizu#meizu
+anzhi#anzhi
 direct#duduche.me
