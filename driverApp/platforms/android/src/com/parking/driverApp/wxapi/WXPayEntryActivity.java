@@ -1,9 +1,10 @@
 package com.parking.driverApp.wxapi;
  
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaWebView;
-import org.json.JSONArray;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 
 import com.phonegap.weixin.Keyswx;
 import com.phonegap.weixin.Pgwxpay;
@@ -14,12 +15,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.util.Log;
+import org.apache.cordova.CordovaWebView;
 
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler{
 	

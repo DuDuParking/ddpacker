@@ -25,10 +25,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"FlurryPlugin\"><param name=\"android-package\" value=\"com.phonegap.plugins.flurry.Flurry\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Pgwxpay\"><param name=\"android-package\" value=\"com.phonegap.weixin.Pgwxpay\" /></feature>",
                             "count": 1
                         },
@@ -43,6 +39,14 @@
                         {
                             "xml": "<feature name=\"AmapLocation\"><param name=\"android-package\" value=\"me.duduche.cordova.plugins.amaplocation.AmapLocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"WeChat\"><param name=\"android-package\" value=\"com.wordsbaking.cordova.wechat.WeChat\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"wechatappid\" value=\"wx5b97cae9159c187b\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,7 +56,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 3
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
@@ -117,6 +121,10 @@
                         {
                             "xml": "<meta-data android:name=\"UMENG_CHANNEL\" android:value=\"Android\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<activity android:exported=\"true\" android:label=\"@string/launcher_name\" android:name=\".wxapi.WXEntryActivity\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><data android:scheme=\"wx5b97cae9159c187b\" /></intent-filter></activity>",
+                            "count": 1
                         }
                     ]
                 }
@@ -146,9 +154,6 @@
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "com.phonegap.plugins.flurry": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.phonegap.weixin": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
@@ -164,6 +169,10 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "me.duduche.cordova.plugins.amaplocation": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "com.wordsbaking.cordova.wechat": {
+            "APP_ID": "wx5b97cae9159c187b",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

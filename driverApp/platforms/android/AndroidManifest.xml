@@ -23,13 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="PUSH_APPID" android:value="${getuiAppId}" />
-        <meta-data android:name="PUSH_APPKEY" android:value="${getuiAppKey}" />
-        <meta-data android:name="PUSH_APPSECRET" android:value="${getuiAppSecret}" />
+        <meta-data android:name="PUSH_APPID" android:value="0J2ipM3D2V5WQDpWnQZC1" />
+        <meta-data android:name="PUSH_APPKEY" android:value="qaHlPWSeAu9M5bG9D8akm7" />
+        <meta-data android:name="PUSH_APPSECRET" android:value="PQDrPT2Zgy7Izo1z0MxSi6" />
         <meta-data android:name="PUSH_GROUPID" android:value="" />
         <receiver android:exported="false" android:name="org.apache.cordova.dudu.gexin.GexinSdkMsgReceiver">
             <intent-filter>
-                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
+                <action android:name="com.igexin.sdk.action.0J2ipM3D2V5WQDpWnQZC1" />
             </intent-filter>
         </receiver>
         <service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
@@ -60,7 +60,7 @@
         <receiver android:exported="false" android:name="com.igexin.getuiext.service.PayloadReceiver">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-                <action android:name="com.igexin.sdk.action.${getuiAppId}" />
+                <action android:name="com.igexin.sdk.action.0J2ipM3D2V5WQDpWnQZC1" />
             </intent-filter>
         </receiver>
         <service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice" />
@@ -71,7 +71,14 @@
         </service>
         <activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
         </activity>
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="${amapApiKey}" />
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="4953e8ab250ed8fa4f236c62e645ce5b" />
+        <activity android:exported="true" android:label="@string/launcher_name" android:name=".wxapi.WXEntryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx5b97cae9159c187b" />
+            </intent-filter>
+        </activity>
     </application>
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
