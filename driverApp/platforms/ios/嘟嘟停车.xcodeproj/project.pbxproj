@@ -41,7 +41,6 @@
 		7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
-		87A995479AE94C06B7D2B2EC /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DB80BC78398148EA8DE359C7 /* CDVDevice.m */; };
 		92B292803B3C4618900A282B /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 930286EB4A4D4BB09276D066 /* CDVLocation.m */; };
 		B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D8EA172AD4E5C8B829D18 /* CDVLogger.m */; };
 		B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67604D29BC457AA3767EE9 /* CDVConnection.m */; };
@@ -63,6 +62,7 @@
 		96A930D5EC0D4332B80837DC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8C9B092574216BD046E0C /* libWeChatSDK.a */; };
 		84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = D281EBCA2E434EB6A8C721A7 /* CDVWeChat.m */; };
 		7F1CBB2160734860A491B9CA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0B25BBD7D445FAA975C33D /* libc++.dylib */; };
+		C798EB7D41D84231AFF46A79 /* AppAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE100616FE74E2ABB6A2859 /* AppAvailability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +175,8 @@
 		425C10127AB2431AB56C0EDB /* WXApiObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WXApiObject.h"; path = "com.wordsbaking.cordova.wechat/WXApiObject.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVWeChat.h"; path = "com.wordsbaking.cordova.wechat/CDVWeChat.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8C0B25BBD7D445FAA975C33D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		DBE100616FE74E2ABB6A2859 /* AppAvailability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppAvailability.m"; path = "cordova-plugin-appavailability/AppAvailability.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		EF7FA97625444221B7D39955 /* AppAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppAvailability.h"; path = "cordova-plugin-appavailability/AppAvailability.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +332,8 @@
 				BFCA06B1FE4947668CC9BB65 /* WXApi.h */,
 				425C10127AB2431AB56C0EDB /* WXApiObject.h */,
 				DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */,
+				DBE100616FE74E2ABB6A2859 /* AppAvailability.m */,
+				EF7FA97625444221B7D39955 /* AppAvailability.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -532,7 +536,6 @@
 				D8C9E3DB1ADD370C007E2962 /* Pgwxpay.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				D8AC8B7A1A9F6C31006CF793 /* AppDelegate+notification.m in Sources */,
-				87A995479AE94C06B7D2B2EC /* CDVDevice.m in Sources */,
 				3FA3CBFFD49E49698AFBBFCD /* CDVInAppBrowser.m in Sources */,
 				B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */,
 				64F875768DE946D3BD1DC89E /* CDVReachability.m in Sources */,
@@ -543,6 +546,8 @@
 				F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */,
 				92B292803B3C4618900A282B /* CDVLocation.m in Sources */,
 				84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */,
+				C798EB7D41D84231AFF46A79 /* AppAvailability.m in Sources */,
+				5A172420BC7D471E9ED8542B /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

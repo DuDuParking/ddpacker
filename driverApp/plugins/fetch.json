@@ -54,5 +54,13 @@
         "variables": {
             "APP_ID": "wx5b97cae9159c187b"
         }
+    },
+    "cordova-plugin-appavailability": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-appavailability"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

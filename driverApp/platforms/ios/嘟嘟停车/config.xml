@@ -49,6 +49,9 @@
         <param name="ios-package" value="CDVWeChat" />
     </feature>
     <preference name="wechatappid" value="wx5b97cae9159c187b" />
+    <feature name="AppAvailability">
+        <param name="ios-package" value="AppAvailability" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

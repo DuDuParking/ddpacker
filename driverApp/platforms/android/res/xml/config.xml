@@ -29,6 +29,9 @@
         <param name="android-package" value="com.wordsbaking.cordova.wechat.WeChat" />
     </feature>
     <preference name="wechatappid" value="wx5b97cae9159c187b" />
+    <feature name="AppAvailability">
+        <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

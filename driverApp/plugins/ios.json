@@ -51,6 +51,10 @@
                         {
                             "xml": "<preference name=\"wechatappid\" value=\"wx5b97cae9159c187b\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"ios-package\" value=\"AppAvailability\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -163,6 +167,9 @@
         },
         "com.wordsbaking.cordova.wechat": {
             "APP_ID": "wx5b97cae9159c187b",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugin-appavailability": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },
