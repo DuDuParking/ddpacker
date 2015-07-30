@@ -26,5 +26,33 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "me.duduche.cordova.plugins.amaplocation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova_amap_sdk_location.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.wordsbaking.cordova.wechat": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vilic/cordova-plugin-wechat.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "wx5b97cae9159c187b"
+        }
     }
 }

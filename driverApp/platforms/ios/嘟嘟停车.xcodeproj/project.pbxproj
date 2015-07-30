@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -47,11 +46,9 @@
 		B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D8EA172AD4E5C8B829D18 /* CDVLogger.m */; };
 		B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67604D29BC457AA3767EE9 /* CDVConnection.m */; };
 		C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */; };
-		C9F0BE9CFA8945AAA43DECF5 /* FlurryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890DED5E8E747FB97672CA4 /* FlurryPlugin.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D8AC8B7A1A9F6C31006CF793 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AC8B791A9F6C31006CF793 /* AppDelegate+notification.m */; };
 		D8B0DBAC1ABEC5E200B4D00E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B0DBAB1ABEC5E200B4D00E /* Security.framework */; };
-		D8B0DBAD1ABEC5F000B4D00E /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B0DBA71ABEBFC200B4D00E /* libFlurry_4.3.2.a */; };
 		D8C9E3D41ADD36E4007E2962 /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8C9E3D11ADD36E4007E2962 /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D8C9E3D51ADD36E4007E2962 /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8C9E3D31ADD36E4007E2962 /* WXUtil.mm */; };
 		D8C9E3DA1ADD370C007E2962 /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8C9E3D71ADD370C007E2962 /* payRequsestHandler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -63,6 +60,9 @@
 		D8FC048C1B3BEB4900C95184 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162380CFDDCA45D791FE7C8D /* CoreLocation.framework */; };
 		DD71C5DADA764CC8A4244E7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98461BF418E4206912567ED /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D401762C48B5986A18B0 /* AppDelegate+UmengAnalytics.m */; };
+		96A930D5EC0D4332B80837DC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8C9B092574216BD046E0C /* libWeChatSDK.a */; };
+		84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = D281EBCA2E434EB6A8C721A7 /* CDVWeChat.m */; };
+		7F1CBB2160734860A491B9CA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0B25BBD7D445FAA975C33D /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +144,6 @@
 		D71D8EA172AD4E5C8B829D18 /* CDVLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVLogger.m; path = org.apache.cordova.console/CDVLogger.m; sourceTree = "<group>"; };
 		D8AC8B781A9F6C31006CF793 /* AppDelegate+notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.h"; sourceTree = "<group>"; };
 		D8AC8B791A9F6C31006CF793 /* AppDelegate+notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.m"; sourceTree = "<group>"; };
-		D8B0DBA71ABEBFC200B4D00E /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.2.a; path = "嘟嘟停车/Plugins/com.phonegap.plugins.flurry/libFlurry_4.3.2.a"; sourceTree = "<group>"; };
 		D8B0DBAB1ABEC5E200B4D00E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D8C9E3D01ADD36E4007E2962 /* ApiXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiXml.h; sourceTree = "<group>"; };
 		D8C9E3D11ADD36E4007E2962 /* ApiXml.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ApiXml.mm; sourceTree = "<group>"; };
@@ -170,6 +169,12 @@
 		F859D0BE6DE2417E96E477E7 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		FA1F59423B6348BFAAE42C08 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
 		FC67604D29BC457AA3767EE9 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
+		2AB8C9B092574216BD046E0C /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libWeChatSDK.a"; path = "嘟嘟停车/Plugins/com.wordsbaking.cordova.wechat/libWeChatSDK.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		D281EBCA2E434EB6A8C721A7 /* CDVWeChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVWeChat.m"; path = "com.wordsbaking.cordova.wechat/CDVWeChat.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		BFCA06B1FE4947668CC9BB65 /* WXApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WXApi.h"; path = "com.wordsbaking.cordova.wechat/WXApi.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		425C10127AB2431AB56C0EDB /* WXApiObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WXApiObject.h"; path = "com.wordsbaking.cordova.wechat/WXApiObject.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVWeChat.h"; path = "com.wordsbaking.cordova.wechat/CDVWeChat.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8C0B25BBD7D445FAA975C33D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +187,6 @@
 				D8C9E3E41ADD3A53007E2962 /* libsqlite3.0.dylib in Frameworks */,
 				D8C9E3EB1ADD3CC1007E2962 /* libWeChatSDK.a in Frameworks */,
 				D8C9E3E21ADD3A2A007E2962 /* libz.dylib in Frameworks */,
-				D8B0DBAD1ABEC5F000B4D00E /* libFlurry_4.3.2.a in Frameworks */,
 				D8B0DBAC1ABEC5E200B4D00E /* Security.framework in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
@@ -190,6 +194,8 @@
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				DD71C5DADA764CC8A4244E7B /* SystemConfiguration.framework in Frameworks */,
 				3275DE3CAB1B4DF4842C7181 /* libMobClickLibrary.a in Frameworks */,
+				96A930D5EC0D4332B80837DC /* libWeChatSDK.a in Frameworks */,
+				7F1CBB2160734860A491B9CA /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,13 +274,14 @@
 				D8C9E3E31ADD3A53007E2962 /* libsqlite3.0.dylib */,
 				D8C9E3E11ADD3A2A007E2962 /* libz.dylib */,
 				D8B0DBAB1ABEC5E200B4D00E /* Security.framework */,
-				D8B0DBA71ABEBFC200B4D00E /* libFlurry_4.3.2.a */,
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				B98461BF418E4206912567ED /* SystemConfiguration.framework */,
 				162380CFDDCA45D791FE7C8D /* CoreLocation.framework */,
 				3A546DBB29654F51BF4007E7 /* libMobClickLibrary.a */,
+				2AB8C9B092574216BD046E0C /* libWeChatSDK.a */,
+				8C0B25BBD7D445FAA975C33D /* libc++.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,6 +326,10 @@
 				0D90621AA38A45B8B5668251 /* MobClickSocialAnalytics.h */,
 				930286EB4A4D4BB09276D066 /* CDVLocation.m */,
 				0EF8F50E85D349B1B5A815D5 /* CDVLocation.h */,
+				D281EBCA2E434EB6A8C721A7 /* CDVWeChat.m */,
+				BFCA06B1FE4947668CC9BB65 /* WXApi.h */,
+				425C10127AB2431AB56C0EDB /* WXApiObject.h */,
+				DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -527,11 +538,11 @@
 				64F875768DE946D3BD1DC89E /* CDVReachability.m in Sources */,
 				B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */,
 				D8C9E3DA1ADD370C007E2962 /* payRequsestHandler.mm in Sources */,
-				C9F0BE9CFA8945AAA43DECF5 /* FlurryPlugin.m in Sources */,
 				D8C9E3D51ADD36E4007E2962 /* WXUtil.mm in Sources */,
 				C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */,
 				F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */,
 				92B292803B3C4618900A282B /* CDVLocation.m in Sources */,
+				84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,8 +562,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Qin Liu (9ZZX6D75LZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -564,10 +574,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.phonegap.plugins.flurry\"",
 					"$(PROJECT_DIR)/嘟嘟停车/Plugins/com.phonegap.plugins.flurry",
 					"$(PROJECT_DIR)/嘟嘟停车/weixin",
 					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.qiudao.cordova.umeng-analytics\"",
+					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.wordsbaking.cordova.wechat\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -582,7 +592,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "嘟嘟停车";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "28bb7ceb-fa67-44eb-95e1-a9b2d4872952";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -592,8 +602,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Qin Liu (HEGRR36F4C)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "嘟嘟停车/嘟嘟停车-Prefix.pch";
@@ -603,10 +612,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.phonegap.plugins.flurry\"",
 					"$(PROJECT_DIR)/嘟嘟停车/Plugins/com.phonegap.plugins.flurry",
 					"$(PROJECT_DIR)/嘟嘟停车/weixin",
 					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.qiudao.cordova.umeng-analytics\"",
+					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.wordsbaking.cordova.wechat\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -621,7 +630,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "嘟嘟停车";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "856cff1b-21a5-4466-8eb6-7a59a0c566db";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -636,8 +645,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qin Liu (9ZZX6D75LZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -665,7 +673,7 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "856cff1b-21a5-4466-8eb6-7a59a0c566db";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -682,8 +690,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Qin Liu (HEGRR36F4C)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -710,12 +717,94 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "856cff1b-21a5-4466-8eb6-7a59a0c566db";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
+		};
+		C41953731B46D17900660675 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PROVISIONING_PROFILE = "856cff1b-21a5-4466-8eb6-7a59a0c566db";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Adhoc;
+		};
+		C41953741B46D17900660675 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Qin Liu (HEGRR36F4C)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "嘟嘟停车/嘟嘟停车-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "嘟嘟停车/嘟嘟停车-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/嘟嘟停车/Plugins/com.phonegap.plugins.flurry",
+					"$(PROJECT_DIR)/嘟嘟停车/weixin",
+					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.qiudao.cordova.umeng-analytics\"",
+					"\"$(SRCROOT)/嘟嘟停车/Plugins/com.wordsbaking.cordova.wechat\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "嘟嘟停车";
+				PROVISIONING_PROFILE = "9105bc98-4ddf-4ea0-bf8b-19c278625f01";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Adhoc;
 		};
 /* End XCBuildConfiguration section */
 
@@ -725,6 +814,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				C41953741B46D17900660675 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -734,6 +824,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				C41953731B46D17900660675 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

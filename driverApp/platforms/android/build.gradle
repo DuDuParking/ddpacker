@@ -16,8 +16,15 @@ buildscript {
 
 ext.multiarch=false
 
+repositories {
+    mavenCentral()
+    flatDir { dirs 'libs' }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.github.pwittchen:prefser:1.0.3'
     for (subproject in getProjectList()) {
         compile project(subproject)
     }
@@ -37,8 +44,8 @@ android {
     }
 
     defaultConfig {
-        versionCode 100003
-        versionName "1.0.3"
+        versionCode 101005
+        versionName "1.1.5"
     }
 
     packer {
@@ -49,7 +56,7 @@ android {
         // 指定渠道打包需要修改的AndroidManifest文件项
         manifestMatcher = ['UMENG_CHANNEL']
         // 指定是否使用build版本号自增
-        buildNumberAuto = true
+        buildNumberAuto = false
         // 指定使用版本号自增的buildType，默认是全部
         buildNumberTypeMatcher = ['release', 'beta']
     }
@@ -67,27 +74,16 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
-            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
-                                    , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
-                                    , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
-            ]
         }
         beta {
             signingConfig signingConfigs.release
             minifyEnabled false
             debuggable true
-            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
-                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
-                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
-            ]
         }
         debug {
+            signingConfig signingConfigs.release
             minifyEnabled false
             debuggable true
-            manifestPlaceholders = [ getuiAppId:"0J2ipM3D2V5WQDpWnQZC1"
-                                     , getuiAppKey:"qaHlPWSeAu9M5bG9D8akm7"
-                                     , getuiAppSecret:"PQDrPT2Zgy7Izo1z0MxSi6"
-            ]
         }
     }
 

@@ -25,10 +25,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"FlurryPlugin\"><param name=\"ios-package\" value=\"FlurryPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Pgwxpay\"><param name=\"ios-package\" value=\"Pgwxpay\" /></feature>",
                             "count": 1
                         },
@@ -47,6 +43,14 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"WeChat\"><param name=\"ios-package\" value=\"CDVWeChat\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"wechatappid\" value=\"wx5b97cae9159c187b\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -62,6 +66,10 @@
                     "SystemConfiguration.framework": [
                         {
                             "xml": "true",
+                            "count": 1
+                        },
+                        {
+                            "xml": false,
                             "count": 1
                         }
                     ],
@@ -79,6 +87,28 @@
                         {
                             "xml": true,
                             "count": 1
+                        },
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libc++.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.0.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "Security.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
                         }
                     ]
                 }
@@ -88,6 +118,12 @@
                     "NSLocationWhenInUseUsageDescription": [
                         {
                             "xml": "<string />",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLName</key><string>weixin</string><key>CFBundleURLSchemes</key><array><string>wx5b97cae9159c187b</string></array></dict></array>",
                             "count": 1
                         }
                     ]
@@ -108,9 +144,6 @@
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "com.phonegap.plugins.flurry": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.phonegap.weixin": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
@@ -123,6 +156,13 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "me.duduche.cordova.plugins.amaplocation": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "com.wordsbaking.cordova.wechat": {
+            "APP_ID": "wx5b97cae9159c187b",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

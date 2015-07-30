@@ -13,9 +13,6 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
-    <feature name="FlurryPlugin">
-        <param name="android-package" value="com.phonegap.plugins.flurry.Flurry" />
-    </feature>
     <feature name="Pgwxpay">
         <param name="android-package" value="com.phonegap.weixin.Pgwxpay" />
     </feature>
@@ -25,6 +22,13 @@
     <feature name="UmengAnalytics">
         <param name="android-package" value="com.qiudao.cordova.umeng.UmengAnalytics" />
     </feature>
+    <feature name="AmapLocation">
+        <param name="android-package" value="me.duduche.cordova.plugins.amaplocation.AmapLocation" />
+    </feature>
+    <feature name="WeChat">
+        <param name="android-package" value="com.wordsbaking.cordova.wechat.WeChat" />
+    </feature>
+    <preference name="wechatappid" value="wx5b97cae9159c187b" />
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

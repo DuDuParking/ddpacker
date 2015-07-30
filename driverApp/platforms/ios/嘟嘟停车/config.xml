@@ -31,9 +31,6 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
-    <feature name="FlurryPlugin">
-        <param name="ios-package" value="FlurryPlugin" />
-    </feature>
     <feature name="Pgwxpay">
         <param name="ios-package" value="Pgwxpay" />
     </feature>
@@ -48,6 +45,10 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="WeChat">
+        <param name="ios-package" value="CDVWeChat" />
+    </feature>
+    <preference name="wechatappid" value="wx5b97cae9159c187b" />
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

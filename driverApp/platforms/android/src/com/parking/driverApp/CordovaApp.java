@@ -24,12 +24,11 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
-import org.apache.cordova.*;
-
-import com.flurry.android.FlurryAgent;
 import com.igexin.sdk.PushManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
+
+import org.apache.cordova.CordovaActivity;
 
 public class CordovaApp extends CordovaActivity {
     @Override
@@ -53,8 +52,8 @@ public class CordovaApp extends CordovaActivity {
     protected void onStart() {
         super.onStart();
 
-        FlurryAgent.setCaptureUncaughtExceptions(true);
-        FlurryAgent.onStartSession(this, "WG6F24XTXTVTP2J4ZDFN");
+//        FlurryAgent.setCaptureUncaughtExceptions(true);
+//        FlurryAgent.onStartSession(this, "WG6F24XTXTVTP2J4ZDFN");
 
         // Umeng Analytics
         MobclickAgent.setDebugMode(BuildConfig.DEBUG);
@@ -67,7 +66,7 @@ public class CordovaApp extends CordovaActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        FlurryAgent.onEndSession(this);
+//        FlurryAgent.onEndSession(this);
 
         MobclickAgent.onPause(this);
     }
@@ -88,4 +87,5 @@ public class CordovaApp extends CordovaActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }
