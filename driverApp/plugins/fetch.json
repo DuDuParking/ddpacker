@@ -1,12 +1,4 @@
 {
-    "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
-        "source": {
-            "type": "registry",
-            "id": "uk.co.workingedge.phonegap.plugin.launchnavigator"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "com.qiudao.cordova.umeng-analytics": {
         "source": {
             "type": "git",
@@ -59,6 +51,15 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-appavailability"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugins-launchnavigator": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova-plugin-launchnavigator.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

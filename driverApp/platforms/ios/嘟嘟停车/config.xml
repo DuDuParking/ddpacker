@@ -34,9 +34,6 @@
     <feature name="Pgwxpay">
         <param name="ios-package" value="Pgwxpay" />
     </feature>
-    <feature name="LaunchNavigator">
-        <param name="ios-package" value="LaunchNavigator" />
-    </feature>
     <feature name="UmengAnalytics">
         <param name="ios-package" value="UmengAnalytics" />
         <param name="onload" value="true" />
