@@ -29,10 +29,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigator\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"UmengAnalytics\"><param name=\"ios-package\" value=\"UmengAnalytics\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -50,6 +46,28 @@
                         },
                         {
                             "xml": "<preference name=\"wechatappid\" value=\"wx5b97cae9159c187b\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"ios-package\" value=\"AppAvailability\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<preference name=\"partner\" value=\"2088812264045844\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"seller\" value=\"duduparking@163.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"private_key\" value=\"po1kw89negyme0s0v3p9ao55ihd5vtf5\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AliPay\"><param name=\"ios-package\" value=\"AlipayPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -70,6 +88,10 @@
                         },
                         {
                             "xml": false,
+                            "count": 1
+                        },
+                        {
+                            "xml": true,
                             "count": 1
                         }
                     ],
@@ -109,6 +131,16 @@
                         {
                             "xml": false,
                             "count": 1
+                        },
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreTelephony.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
                         }
                     ]
                 }
@@ -147,9 +179,6 @@
         "com.phonegap.weixin": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.qiudao.cordova.umeng-analytics": {
             "UMENG_IOS_ID": "557e378167e58e85f9000eba",
             "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
@@ -163,6 +192,18 @@
         },
         "com.wordsbaking.cordova.wechat": {
             "APP_ID": "wx5b97cae9159c187b",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugins-launchnavigator": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "wang.imchao.plugin.alipay": {
+            "PARTNER_ID": "2088812264045844",
+            "SELLER_ACCOUNT": "duduparking@163.com",
+            "PRIVATE_KEY": "po1kw89negyme0s0v3p9ao55ihd5vtf5",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

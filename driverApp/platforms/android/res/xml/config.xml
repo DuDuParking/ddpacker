@@ -16,9 +16,6 @@
     <feature name="Pgwxpay">
         <param name="android-package" value="com.phonegap.weixin.Pgwxpay" />
     </feature>
-    <feature name="LaunchNavigator">
-        <param name="android-package" value="uk.co.workingedge.phonegap.plugin.LaunchNavigator" />
-    </feature>
     <feature name="UmengAnalytics">
         <param name="android-package" value="com.qiudao.cordova.umeng.UmengAnalytics" />
     </feature>
@@ -29,6 +26,19 @@
         <param name="android-package" value="com.wordsbaking.cordova.wechat.WeChat" />
     </feature>
     <preference name="wechatappid" value="wx5b97cae9159c187b" />
+    <feature name="AppAvailability">
+        <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability" />
+    </feature>
+    <feature name="LaunchNavigator">
+        <param name="android-package" value="org.apache.cordova.launchnavigator.LaunchNavigator" />
+    </feature>
+    <preference name="partner" value="2088812264045844" />
+    <preference name="seller" value="duduparking@163.com" />
+    <preference name="private_key" value="po1kw89negyme0s0v3p9ao55ihd5vtf5" />
+    <feature name="AliPay">
+        <param name="android-package" value="wang.imchao.plugin.alipay.AliPayPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">

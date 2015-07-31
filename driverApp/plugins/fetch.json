@@ -1,12 +1,4 @@
 {
-    "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
-        "source": {
-            "type": "registry",
-            "id": "uk.co.workingedge.phonegap.plugin.launchnavigator"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "com.qiudao.cordova.umeng-analytics": {
         "source": {
             "type": "git",
@@ -53,6 +45,36 @@
         "is_top_level": true,
         "variables": {
             "APP_ID": "wx5b97cae9159c187b"
+        }
+    },
+    "cordova-plugin-appavailability": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-appavailability"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugins-launchnavigator": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova-plugin-launchnavigator.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "wang.imchao.plugin.alipay": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova-plugin-alipay.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "PARTNER_ID": "2088812264045844",
+            "SELLER_ACCOUNT": "duduparking@163.com",
+            "PRIVATE_KEY": "po1kw89negyme0s0v3p9ao55ihd5vtf5"
         }
     }
 }

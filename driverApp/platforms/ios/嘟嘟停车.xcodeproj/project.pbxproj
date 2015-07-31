@@ -41,11 +41,9 @@
 		7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
-		87A995479AE94C06B7D2B2EC /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DB80BC78398148EA8DE359C7 /* CDVDevice.m */; };
 		92B292803B3C4618900A282B /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 930286EB4A4D4BB09276D066 /* CDVLocation.m */; };
 		B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D8EA172AD4E5C8B829D18 /* CDVLogger.m */; };
 		B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67604D29BC457AA3767EE9 /* CDVConnection.m */; };
-		C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9233D6E9B5549B4B2C159A6 /* LaunchNavigator.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D8AC8B7A1A9F6C31006CF793 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AC8B791A9F6C31006CF793 /* AppDelegate+notification.m */; };
 		D8B0DBAC1ABEC5E200B4D00E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B0DBAB1ABEC5E200B4D00E /* Security.framework */; };
@@ -63,6 +61,16 @@
 		96A930D5EC0D4332B80837DC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8C9B092574216BD046E0C /* libWeChatSDK.a */; };
 		84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = D281EBCA2E434EB6A8C721A7 /* CDVWeChat.m */; };
 		7F1CBB2160734860A491B9CA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0B25BBD7D445FAA975C33D /* libc++.dylib */; };
+		C798EB7D41D84231AFF46A79 /* AppAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE100616FE74E2ABB6A2859 /* AppAvailability.m */; };
+		313BC2C4BF3541AD959F6B68 /* AlipayPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229DAE8D274473E8462F94B /* AlipayPlugin.m */; };
+		6516ACAE9A764B35A18B6AC9 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = DA796FD46879483B9488061F /* Order.m */; };
+		E0A296EDF1284512951929CB /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CD07B6515491D9F9602B6 /* DataSigner.m */; };
+		80D54EAE4DF04AC3B12D7C2B /* NSDataEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE5C4FBCAE4CF1BC990B8A /* NSDataEx.m */; };
+		8AC0413D81DB4DCDB2D796AA /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6244930F146C4001B12D5294 /* RSADataSigner.m */; };
+		9121B650B5514D71930B9E4E /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BF70F6377461395FC89DD /* openssl_wrapper.m */; };
+		AFA680E271C2441E8C4E205F /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A22340E0A541F5A85DB4A7 /* AlipaySDK.framework */; };
+		1FC4A4E8C5AC499EB7A35B42 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5CC03199954C10B4243B94 /* openssl.framework */; };
+		0A1A7980FE40433BBD66661C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B12D9B2338D49E0BD72D208 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +183,23 @@
 		425C10127AB2431AB56C0EDB /* WXApiObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WXApiObject.h"; path = "com.wordsbaking.cordova.wechat/WXApiObject.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVWeChat.h"; path = "com.wordsbaking.cordova.wechat/CDVWeChat.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8C0B25BBD7D445FAA975C33D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		DBE100616FE74E2ABB6A2859 /* AppAvailability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppAvailability.m"; path = "cordova-plugin-appavailability/AppAvailability.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		EF7FA97625444221B7D39955 /* AppAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppAvailability.h"; path = "cordova-plugin-appavailability/AppAvailability.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		9229DAE8D274473E8462F94B /* AlipayPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlipayPlugin.m"; path = "wang.imchao.plugin.alipay/AlipayPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DA796FD46879483B9488061F /* Order.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Order.m"; path = "wang.imchao.plugin.alipay/Order.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		454CD07B6515491D9F9602B6 /* DataSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DataSigner.m"; path = "wang.imchao.plugin.alipay/DataSigner.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		9BEE5C4FBCAE4CF1BC990B8A /* NSDataEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDataEx.m"; path = "wang.imchao.plugin.alipay/NSDataEx.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		6244930F146C4001B12D5294 /* RSADataSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "RSADataSigner.m"; path = "wang.imchao.plugin.alipay/RSADataSigner.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		054BF70F6377461395FC89DD /* openssl_wrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "openssl_wrapper.m"; path = "wang.imchao.plugin.alipay/openssl_wrapper.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		05F986E27D8E4EE4ABE7B5AD /* AlipayPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlipayPlugin.h"; path = "wang.imchao.plugin.alipay/AlipayPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		269B242EF4C444E6AA3F4F0E /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Order.h"; path = "wang.imchao.plugin.alipay/Order.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		61C940DE362847A888B66C41 /* DataSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DataSigner.h"; path = "wang.imchao.plugin.alipay/DataSigner.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		725820403E5E4C2594E6C6A5 /* NSDataEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDataEx.h"; path = "wang.imchao.plugin.alipay/NSDataEx.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C707A94795DF4625B1B6540E /* RSADataSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RSADataSigner.h"; path = "wang.imchao.plugin.alipay/RSADataSigner.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		F2E0145B6BEC4B0AA1EC1988 /* openssl_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "openssl_wrapper.h"; path = "wang.imchao.plugin.alipay/openssl_wrapper.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		05A22340E0A541F5A85DB4A7 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AlipaySDK.framework"; path = "嘟嘟停车/Plugins/wang.imchao.plugin.alipay/AlipaySDK.framework"; sourceTree = "<group>"; };
+		5F5CC03199954C10B4243B94 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "openssl.framework"; path = "嘟嘟停车/Plugins/wang.imchao.plugin.alipay/openssl.framework"; sourceTree = "<group>"; };
+		7B12D9B2338D49E0BD72D208 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +221,9 @@
 				3275DE3CAB1B4DF4842C7181 /* libMobClickLibrary.a in Frameworks */,
 				96A930D5EC0D4332B80837DC /* libWeChatSDK.a in Frameworks */,
 				7F1CBB2160734860A491B9CA /* libc++.dylib in Frameworks */,
+				AFA680E271C2441E8C4E205F /* AlipaySDK.framework in Frameworks */,
+				1FC4A4E8C5AC499EB7A35B42 /* openssl.framework in Frameworks */,
+				0A1A7980FE40433BBD66661C /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +310,9 @@
 				3A546DBB29654F51BF4007E7 /* libMobClickLibrary.a */,
 				2AB8C9B092574216BD046E0C /* libWeChatSDK.a */,
 				8C0B25BBD7D445FAA975C33D /* libc++.dylib */,
+				05A22340E0A541F5A85DB4A7 /* AlipaySDK.framework */,
+				5F5CC03199954C10B4243B94 /* openssl.framework */,
+				7B12D9B2338D49E0BD72D208 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,6 +361,20 @@
 				BFCA06B1FE4947668CC9BB65 /* WXApi.h */,
 				425C10127AB2431AB56C0EDB /* WXApiObject.h */,
 				DE7D89D875DF4352B8D78EE2 /* CDVWeChat.h */,
+				DBE100616FE74E2ABB6A2859 /* AppAvailability.m */,
+				EF7FA97625444221B7D39955 /* AppAvailability.h */,
+				9229DAE8D274473E8462F94B /* AlipayPlugin.m */,
+				DA796FD46879483B9488061F /* Order.m */,
+				454CD07B6515491D9F9602B6 /* DataSigner.m */,
+				9BEE5C4FBCAE4CF1BC990B8A /* NSDataEx.m */,
+				6244930F146C4001B12D5294 /* RSADataSigner.m */,
+				054BF70F6377461395FC89DD /* openssl_wrapper.m */,
+				05F986E27D8E4EE4ABE7B5AD /* AlipayPlugin.h */,
+				269B242EF4C444E6AA3F4F0E /* Order.h */,
+				61C940DE362847A888B66C41 /* DataSigner.h */,
+				725820403E5E4C2594E6C6A5 /* NSDataEx.h */,
+				C707A94795DF4625B1B6540E /* RSADataSigner.h */,
+				F2E0145B6BEC4B0AA1EC1988 /* openssl_wrapper.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -532,17 +577,23 @@
 				D8C9E3DB1ADD370C007E2962 /* Pgwxpay.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				D8AC8B7A1A9F6C31006CF793 /* AppDelegate+notification.m in Sources */,
-				87A995479AE94C06B7D2B2EC /* CDVDevice.m in Sources */,
 				3FA3CBFFD49E49698AFBBFCD /* CDVInAppBrowser.m in Sources */,
 				B5BA8F0F505248F3A3BA094F /* CDVConnection.m in Sources */,
 				64F875768DE946D3BD1DC89E /* CDVReachability.m in Sources */,
 				B4030A7367CC45908C1610BD /* CDVLogger.m in Sources */,
 				D8C9E3DA1ADD370C007E2962 /* payRequsestHandler.mm in Sources */,
 				D8C9E3D51ADD36E4007E2962 /* WXUtil.mm in Sources */,
-				C238C9B8C880466880786066 /* LaunchNavigator.m in Sources */,
 				F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */,
 				92B292803B3C4618900A282B /* CDVLocation.m in Sources */,
 				84F55DC17B3343849A18315F /* CDVWeChat.m in Sources */,
+				C798EB7D41D84231AFF46A79 /* AppAvailability.m in Sources */,
+				5A172420BC7D471E9ED8542B /* CDVDevice.m in Sources */,
+				313BC2C4BF3541AD959F6B68 /* AlipayPlugin.m in Sources */,
+				6516ACAE9A764B35A18B6AC9 /* Order.m in Sources */,
+				E0A296EDF1284512951929CB /* DataSigner.m in Sources */,
+				80D54EAE4DF04AC3B12D7C2B /* NSDataEx.m in Sources */,
+				8AC0413D81DB4DCDB2D796AA /* RSADataSigner.m in Sources */,
+				9121B650B5514D71930B9E4E /* openssl_wrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +645,11 @@
 				PRODUCT_NAME = "嘟嘟停车";
 				PROVISIONING_PROFILE = "28bb7ceb-fa67-44eb-95e1-a9b2d4872952";
 				TARGETED_DEVICE_FAMILY = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+				);
 			};
 			name = Debug;
 		};
@@ -632,6 +688,11 @@
 				PRODUCT_NAME = "嘟嘟停车";
 				PROVISIONING_PROFILE = "856cff1b-21a5-4466-8eb6-7a59a0c566db";
 				TARGETED_DEVICE_FAMILY = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+				);
 			};
 			name = Release;
 		};
@@ -803,6 +864,11 @@
 				PRODUCT_NAME = "嘟嘟停车";
 				PROVISIONING_PROFILE = "9105bc98-4ddf-4ea0-bf8b-19c278625f01";
 				TARGETED_DEVICE_FAMILY = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+					"\"嘟嘟停车/Plugins/wang.imchao.plugin.alipay\"",
+				);
 			};
 			name = Adhoc;
 		};

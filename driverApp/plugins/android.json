@@ -29,10 +29,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"uk.co.workingedge.phonegap.plugin.LaunchNavigator\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"UmengAnalytics\"><param name=\"android-package\" value=\"com.qiudao.cordova.umeng.UmengAnalytics\" /></feature>",
                             "count": 1
                         },
@@ -46,6 +42,30 @@
                         },
                         {
                             "xml": "<preference name=\"wechatappid\" value=\"wx5b97cae9159c187b\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"android-package\" value=\"com.ohh2ahh.appavailability.AppAvailability\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"org.apache.cordova.launchnavigator.LaunchNavigator\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"partner\" value=\"2088812264045844\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"seller\" value=\"duduparking@163.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"private_key\" value=\"po1kw89negyme0s0v3p9ao55ihd5vtf5\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AliPay\"><param name=\"android-package\" value=\"wang.imchao.plugin.alipay.AliPayPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -98,18 +118,22 @@
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ],
@@ -124,6 +148,10 @@
                         },
                         {
                             "xml": "<activity android:exported=\"true\" android:label=\"@string/launcher_name\" android:name=\".wxapi.WXEntryActivity\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><data android:scheme=\"wx5b97cae9159c187b\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden|navigation\" android:exported=\"false\" android:name=\"com.alipay.sdk.app.H5PayActivity\" android:screenOrientation=\"behind\" android:windowSoftInputMode=\"adjustResize|stateHidden\"></activity>",
                             "count": 1
                         }
                     ]
@@ -157,9 +185,6 @@
         "com.phonegap.weixin": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "uk.co.workingedge.phonegap.plugin.LaunchNavigator": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "com.qiudao.cordova.umeng-analytics": {
             "UMENG_IOS_ID": "557e378167e58e85f9000eba",
             "UMENG_ANDROID_ID": "557e369667e58e56cd0015a9",
@@ -173,6 +198,18 @@
         },
         "com.wordsbaking.cordova.wechat": {
             "APP_ID": "wx5b97cae9159c187b",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugins-launchnavigator": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "wang.imchao.plugin.alipay": {
+            "PARTNER_ID": "2088812264045844",
+            "SELLER_ACCOUNT": "duduparking@163.com",
+            "PRIVATE_KEY": "po1kw89negyme0s0v3p9ao55ihd5vtf5",
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },
