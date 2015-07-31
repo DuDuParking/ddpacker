@@ -63,5 +63,18 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "wang.imchao.plugin.alipay": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova-plugin-alipay.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "PARTNER_ID": "2088812264045844",
+            "SELLER_ACCOUNT": "duduparking@163.com",
+            "PRIVATE_KEY": "po1kw89negyme0s0v3p9ao55ihd5vtf5"
+        }
     }
 }

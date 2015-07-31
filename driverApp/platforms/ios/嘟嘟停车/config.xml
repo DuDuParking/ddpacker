@@ -58,4 +58,11 @@
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <preference name="Orientation" value="portrait" />
+    <preference name="partner" value="2088812264045844" />
+    <preference name="seller" value="duduparking@163.com" />
+    <preference name="private_key" value="po1kw89negyme0s0v3p9ao55ihd5vtf5" />
+    <feature name="AliPay">
+        <param name="ios-package" value="AlipayPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>
