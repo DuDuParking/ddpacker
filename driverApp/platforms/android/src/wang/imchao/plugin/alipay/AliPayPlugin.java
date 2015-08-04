@@ -1,5 +1,7 @@
 package wang.imchao.plugin.alipay;
 
+import android.util.Log;
+
 import com.alipay.sdk.app.PayTask;
 
 import org.apache.cordova.CallbackContext;
@@ -16,7 +18,7 @@ import java.util.Locale;
 import java.util.Random;
 
 public class AliPayPlugin extends CordovaPlugin {
-    private static String TAG = "AliPayPlugin";
+    final private static String TAG = "AliPayPlugin";
 
     //商户PID
     private String partner = "";
@@ -35,13 +37,14 @@ public class AliPayPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
-        this.pay();
+        this.pay(args.optString(0), args.optString(1), args.optString(2));
         return true;
     }
 
-    public void pay() {
+    public void pay(String subject, String body, String price) {
         // 订单
-        String orderInfo = getOrderInfo("测试商品", "详细描述", "0.01");
+        String orderInfo = getOrderInfo(subject, body, price);
+        Log.d(TAG, orderInfo);
 
         // 对订单做RSA 签名
         String sign = sign(orderInfo);
@@ -54,6 +57,7 @@ public class AliPayPlugin extends CordovaPlugin {
 
         // 完整的符合支付宝参数规范的订单信息
         final String payInfo = orderInfo + "&sign=\"" + sign + "\"&" + getSignType();
+        Log.d(TAG, orderInfo);
 
         cordova.getThreadPool().execute(new Runnable() {
             @Override
@@ -65,7 +69,6 @@ public class AliPayPlugin extends CordovaPlugin {
             }
         });
     }
-
 
     /**
      * create the order info. 创建订单信息
@@ -91,8 +94,7 @@ public class AliPayPlugin extends CordovaPlugin {
         orderInfo += "&total_fee=" + "\"" + price + "\"";
 
         // 服务器异步通知页面路径
-        orderInfo += "&notify_url=" + "\"" + "http://notify.msp.hk/notify.htm"
-                + "\"";
+        orderInfo += "&notify_url=" + "\"http://duduche.me/notify.htm\"";
 
         // 服务接口名称， 固定值
         orderInfo += "&service=\"mobile.securitypay.pay\"";
