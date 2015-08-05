@@ -15,8 +15,6 @@ public class SignUtils {
 	private static final String DEFAULT_CHARSET = "UTF-8";
 
 	public static String sign(String content, String privateKey) {
-		Log.d("SignUtils", privateKey);
-
 		try {
 			PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(
 					Base64.decode(privateKey));
@@ -38,5 +36,4 @@ public class SignUtils {
 
 		return null;
 	}
-
 }
