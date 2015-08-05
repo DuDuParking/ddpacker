@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.dudu.gexin.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         },
@@ -66,6 +62,10 @@
                         },
                         {
                             "xml": "<feature name=\"AliPay\"><param name=\"android-package\" value=\"wang.imchao.plugin.alipay.AliPayPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.dudu.gexin.Device\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -170,9 +170,6 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.dudu.gexin": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
@@ -210,6 +207,9 @@
             "PARTNER_ID": "2088812264045844",
             "SELLER_ACCOUNT": "duduparking@163.com",
             "PRIVATE_KEY": "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALk2EL8Mm/RTGoCezRBQ0EFY/6/jckKsI1TQBDJhGBKyLnO/K/u6xdmHjdBsX+omn6ZOSEv6m9wRL+LppsTuRbSIu6mcPk7VLVvVd3PEh3QArROT/xLx3viBqSmh+JKxKs2164RGzyg9EH4Fiak/WhDlOhrqtnaiv908b2CL8fSXAgMBAAECgYBnPdAP70Nv6nM3h03f7mxoQOgmb67do37+ZAYy3xTANzrVopct92saWwmeSQseRvFvjuuWDtiaz6nV31DrLbcEfP/R+S9Ksf/Fj2xuh4i9RXeddpjcxZxrXH99siiBFA20iDoqlcqxiZ4ESevtz7i7HZ0QHx6jEIgdWmjN6LwBQQJBANsylAbDq8CLre8WAALAViBLD1tvCIvf/Ivn4Y5Qq/4xmhq+e61QXdxQocaNIh3xO0vpUngaLca9AZd2ay8v3fkCQQDYTrReOP24pamlHMOzCf29B9Ket21wnHOAn/Aww4tYP4Z6XJTHbYdT1KU5IGiNTtvG8o+vaq8QPLoonYWJ/EsPAkEAgbp+dz5pMQy6BU1M9lPk5TnnPeMJ+Na4vgifqr29/TRYE0n3Ioz08AZcqIkwzu3NfVD6uRAtVXjZL04rg4Ld6QJAR65dS1QrkIMlotfTaoOHGJt9CqfSlpziEd/uotpKVSZIFEiV7Ti4vekcD8BTpXBamKVNRF5gQUs+jbMVy9JVtQJBAIUdVc2ZEl13m4BRdoIwJqNMAXHOA1UWn1pdruuHSsJ6+3jeIh+DgLiEGUF17dkIkiTxMZIwucUMzWJrDEDxNJQ=",
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "org.apache.cordova.dudu.gexin": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

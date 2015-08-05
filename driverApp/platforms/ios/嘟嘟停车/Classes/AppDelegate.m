@@ -29,7 +29,6 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
-#import "Flurry.h"
 #import "payRequsestHandler.h"
 #import "Pgwxpay.h"
 
@@ -90,11 +89,6 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    [Flurry setCrashReportingEnabled:YES];
-    //[Flurry setShowErrorInLogEnabled:YES];
-		//[Flurry setDebugLogEnabled:YES];
-    [Flurry startSession:@"FWTPVQJ3J3MC8NBK37QD"];
     
     [WXApi registerApp:APP_ID withDescription:@"weixin pay"];
 

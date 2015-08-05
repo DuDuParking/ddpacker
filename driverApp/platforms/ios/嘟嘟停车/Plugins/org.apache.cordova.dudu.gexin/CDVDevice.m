@@ -39,7 +39,6 @@
 
 - (void)setCallback:(CDVInvokedUrlCommand*)command
 {
-    selfobj = self;
 	self.callbackId = command.callbackId;
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
@@ -49,7 +48,7 @@
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     } else {
-    		[[UIApplication sharedApplication] registerForRemoteNotificationTypes:UserNotificationTypes];
+    		[[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
     }
 #else
     UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeNone | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeNewsstandContentAvailability;
@@ -79,10 +78,8 @@
 
 - (void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    if(error){
-        NSLog(@"didFailToRegisterForRemoteNotificationsWithError:%@", [error localizedDescription]);
-    }
-    //[self failWithMessage:nil withError:error];
+        NSLog(@"didFailToRegisterForRemoteNotificationsWithError");
+	//[self failWithMessage:nil withError:error];
 }
 
 - (void)notificationReceived {
@@ -129,10 +126,6 @@
 	[commandResult setKeepCallbackAsBool:YES];
   [self.commandDelegate sendPluginResult:commandResult callbackId:self.callbackId];
 }
-
-static CDVPlugin *selfobj;
-
-+ (id) myself { return selfobj; }
 
 /*
 - (void)getDeviceInfo:(CDVInvokedUrlCommand*)command

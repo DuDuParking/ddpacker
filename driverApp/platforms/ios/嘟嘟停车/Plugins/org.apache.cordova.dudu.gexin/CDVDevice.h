@@ -37,8 +37,6 @@
 
 //- (void)getDeviceInfo:(CDVInvokedUrlCommand*)command;
 
-+ (id) myself;
-
 - (void)getPushID:(CDVInvokedUrlCommand*)command;
 - (void)setCallback:(CDVInvokedUrlCommand*)command;
 	

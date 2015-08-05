@@ -16,16 +16,13 @@ static char launchNotificationKey;
 
 - (id) getCommandInstance:(NSString*)className
 {
-    return CDVDevice.myself;
-	//return [self.viewController getCommandInstance:className];
+	return [self.viewController getCommandInstance:className];
 }
 
 // its dangerous to override a method from within a category.
 // Instead we will use method swizzling. we set this up in the load call.
 + (void)load
 {
-    NSLog(@"AppDelegate+notification load");
-    
     Method original, swizzled;
     
     original = class_getInstanceMethod(self, @selector(init));
@@ -47,7 +44,6 @@ static char launchNotificationKey;
 // to process notifications in cold-start situations
 - (void)createNotificationChecker:(NSNotification *)notification
 {
-    NSLog(@"createNotificationChecker");
 	if (notification)
 	{
 		NSDictionary *launchOptions = [notification userInfo];
@@ -57,17 +53,11 @@ static char launchNotificationKey;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken");
-    
     CDVDevice *pushHandler = [self getCommandInstance:@"CDVDevice"];
     [pushHandler didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    if(error){
-        NSLog(@"didFailToRegisterForRemoteNotificationsWithError:%@", [error localizedDescription]);
-    }
-    
     CDVDevice *pushHandler = [self getCommandInstance:@"CDVDevice"];
     [pushHandler didFailToRegisterForRemoteNotificationsWithError:error];
 }
@@ -94,7 +84,7 @@ static char launchNotificationKey;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-    //NSLog(@"active");
+    NSLog(@"active");
     
     //zero badge
     application.applicationIconBadgeNumber = 0;
