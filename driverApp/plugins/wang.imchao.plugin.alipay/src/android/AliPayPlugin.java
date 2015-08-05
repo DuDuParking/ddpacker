@@ -8,6 +8,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -76,6 +77,7 @@ public class AliPayPlugin extends CordovaPlugin {
                 PayTask alipay = new PayTask(cordova.getActivity());
                 // 调用支付接口，获取支付结果
                 String result = alipay.pay(payInfo);
+                mContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
             }
         });
     }
@@ -104,7 +106,7 @@ public class AliPayPlugin extends CordovaPlugin {
         orderInfo += "&total_fee=" + "\"" + price + "\"";
 
         // 服务器异步通知页面路径
-        orderInfo += "&notify_url=" + notifyUrl;
+        orderInfo += "&notify_url=" + "\"" + notifyUrl + "\"";
 
         // 服务接口名称， 固定值
         orderInfo += "&service=\"mobile.securitypay.pay\"";
