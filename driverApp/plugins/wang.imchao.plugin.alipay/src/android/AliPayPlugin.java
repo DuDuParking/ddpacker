@@ -1,6 +1,10 @@
 package wang.imchao.plugin.alipay;
 
+import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
 
@@ -11,13 +15,10 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Random;
 
 public class AliPayPlugin extends CordovaPlugin {
     final private static String TAG = "AliPayPlugin";
@@ -77,14 +78,30 @@ public class AliPayPlugin extends CordovaPlugin {
                 PayTask alipay = new PayTask(cordova.getActivity());
                 // 调用支付接口，获取支付结果
                 String result = alipay.pay(payInfo);
-                mContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
+                PayResult payResult = new PayResult(result);
+
+                // 支付宝返回此次支付结果及加签，建议对支付宝签名信息拿签约时支付宝提供的公钥做验签
+                String resultStatus = payResult.getResultStatus();
+                String resultInfo = payResult.getMemo();
+
+                // 判断resultStatus 为“9000”则代表支付成功，具体状态码代表含义可参考接口文档
+                if (TextUtils.equals(resultStatus, "9000")) {
+                    mContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, resultInfo));
+                } else {
+                    // 判断resultStatus 为非“9000”则代表可能支付失败
+                    // “8000”代表支付结果因为支付渠道原因或者系统原因还在等待支付结果确认，最终交易是否成功以服务端异步通知为准（小概率状态）
+                    if (!TextUtils.equals(resultStatus, "8000")) {
+                        // 其他值就可以判断为支付失败，包括用户主动取消支付，或者系统返回的错误
+                        mContext.error(resultInfo);
+                    }
+                }
+
             }
         });
     }
 
     /**
      * create the order info. 创建订单信息
-     *
      */
     public String getOrderInfo(String subject, String body, String price, String orderId, String notifyUrl) {
         // 签约合作者身份ID
@@ -139,8 +156,7 @@ public class AliPayPlugin extends CordovaPlugin {
     /**
      * sign the order info. 对订单信息进行签名
      *
-     * @param content
-     *            待签名订单信息
+     * @param content 待签名订单信息
      */
     public String sign(String content) {
         return SignUtils.sign(content, privateKey);
@@ -148,10 +164,67 @@ public class AliPayPlugin extends CordovaPlugin {
 
     /**
      * get the sign type we use. 获取签名方式
-     *
      */
     public String getSignType() {
         return "sign_type=\"RSA\"";
+    }
+
+    public class PayResult {
+        private String resultStatus;
+        private String result;
+        private String memo;
+
+        public PayResult(String rawResult) {
+
+            if (TextUtils.isEmpty(rawResult))
+                return;
+
+            String[] resultParams = rawResult.split(";");
+            for (String resultParam : resultParams) {
+                if (resultParam.startsWith("resultStatus")) {
+                    resultStatus = gatValue(resultParam, "resultStatus");
+                }
+                if (resultParam.startsWith("result")) {
+                    result = gatValue(resultParam, "result");
+                }
+                if (resultParam.startsWith("memo")) {
+                    memo = gatValue(resultParam, "memo");
+                }
+            }
+        }
+
+        @Override
+        public String toString() {
+            return "resultStatus={" + resultStatus + "};memo={" + memo
+                    + "};result={" + result + "}";
+        }
+
+        private String gatValue(String content, String key) {
+            String prefix = key + "={";
+            return content.substring(content.indexOf(prefix) + prefix.length(),
+                    content.lastIndexOf("}"));
+        }
+
+        /**
+         * @return the resultStatus
+         */
+        public String getResultStatus() {
+            return resultStatus;
+        }
+
+        /**
+         * @return the memo
+         */
+        public String getMemo() {
+            return memo;
+        }
+
+        /**
+         * @return the result
+         */
+        public String getResult() {
+            return result;
+        }
     }
 
 }

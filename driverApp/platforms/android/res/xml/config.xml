@@ -36,6 +36,9 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.dudu.gexin.Device" />
     </feature>
+    <feature name="LaunchNavigator">
+        <param name="android-package" value="org.apache.cordova.launchnavigator.LaunchNavigator" />
+    </feature>
     <name>嘟嘟停车</name>
     <description>停车省钱神器！</description>
     <author email="dev@duduche.me" href="http://duduche.me">
@@ -45,7 +48,4 @@
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <preference name="Orientation" value="portrait" />
-    <feature name="LaunchNavigator">
-        <param name="android-package" value="org.apache.cordova.launchnavigator.LaunchNavigator" />
-    </feature>
 </widget>
