@@ -62,8 +62,8 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
-        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/device" />
+        <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/dudu/gexin" />
+        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/dudu/gexin" />
     </platform>
 
     <!-- amazon-fireos -->
@@ -74,8 +74,8 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
-        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/device" />
+        <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/dudu/gexin" />
+        <source-file src="src/android/GexinSdkMsgReceiver.java" target-dir="src/org/apache/cordova/dudu/gexin" />
     </platform>
     
     <!-- ubuntu -->

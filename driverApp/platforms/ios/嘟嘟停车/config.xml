@@ -46,9 +46,6 @@
     <feature name="AppAvailability">
         <param name="ios-package" value="AppAvailability" />
     </feature>
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-    </feature>
     <preference name="partner" value="2088812264045844" />
     <preference name="seller" value="duduparking@163.com" />
     <preference name="private_key" value="MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALk2EL8Mm/RTGoCezRBQ0EFY/6/jckKsI1TQBDJhGBKyLnO/K/u6xdmHjdBsX+omn6ZOSEv6m9wRL+LppsTuRbSIu6mcPk7VLVvVd3PEh3QArROT/xLx3viBqSmh+JKxKs2164RGzyg9EH4Fiak/WhDlOhrqtnaiv908b2CL8fSXAgMBAAECgYBnPdAP70Nv6nM3h03f7mxoQOgmb67do37+ZAYy3xTANzrVopct92saWwmeSQseRvFvjuuWDtiaz6nV31DrLbcEfP/R+S9Ksf/Fj2xuh4i9RXeddpjcxZxrXH99siiBFA20iDoqlcqxiZ4ESevtz7i7HZ0QHx6jEIgdWmjN6LwBQQJBANsylAbDq8CLre8WAALAViBLD1tvCIvf/Ivn4Y5Qq/4xmhq+e61QXdxQocaNIh3xO0vpUngaLca9AZd2ay8v3fkCQQDYTrReOP24pamlHMOzCf29B9Ket21wnHOAn/Aww4tYP4Z6XJTHbYdT1KU5IGiNTtvG8o+vaq8QPLoonYWJ/EsPAkEAgbp+dz5pMQy6BU1M9lPk5TnnPeMJ+Na4vgifqr29/TRYE0n3Ioz08AZcqIkwzu3NfVD6uRAtVXjZL04rg4Ld6QJAR65dS1QrkIMlotfTaoOHGJt9CqfSlpziEd/uotpKVSZIFEiV7Ti4vekcD8BTpXBamKVNRF5gQUs+jbMVy9JVtQJBAIUdVc2ZEl13m4BRdoIwJqNMAXHOA1UWn1pdruuHSsJ6+3jeIh+DgLiEGUF17dkIkiTxMZIwucUMzWJrDEDxNJQ=" />
@@ -65,4 +62,7 @@
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <preference name="Orientation" value="portrait" />
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
 </widget>

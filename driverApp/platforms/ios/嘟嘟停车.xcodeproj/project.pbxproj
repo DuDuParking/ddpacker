@@ -70,7 +70,7 @@
 		DD71C5DADA764CC8A4244E7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98461BF418E4206912567ED /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E0A296EDF1284512951929CB /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CD07B6515491D9F9602B6 /* DataSigner.m */; };
 		F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D401762C48B5986A18B0 /* AppDelegate+UmengAnalytics.m */; };
-		0B899955783F44BDB5BDD8FC /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C06EBF652D8A47749D65220B /* AppDelegate+notification.m */; };
+		81B532AE4BA440239E272FCA /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,8 +192,8 @@
 		F859D0BE6DE2417E96E477E7 /* CDVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "org.apache.cordova.network-information/CDVReachability.h"; sourceTree = "<group>"; };
 		FA1F59423B6348BFAAE42C08 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
 		FC67604D29BC457AA3767EE9 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
-		C06EBF652D8A47749D65220B /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		B2D8BE5ECE4343498AE96F6F /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E4EEC22B352A41DEBEBC295E /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,8 +361,8 @@
 				725820403E5E4C2594E6C6A5 /* NSDataEx.h */,
 				C707A94795DF4625B1B6540E /* RSADataSigner.h */,
 				F2E0145B6BEC4B0AA1EC1988 /* openssl_wrapper.h */,
-				C06EBF652D8A47749D65220B /* AppDelegate+notification.m */,
-				B2D8BE5ECE4343498AE96F6F /* AppDelegate+notification.h */,
+				8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */,
+				E4EEC22B352A41DEBEBC295E /* AppDelegate+notification.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -580,7 +580,7 @@
 				80D54EAE4DF04AC3B12D7C2B /* NSDataEx.m in Sources */,
 				8AC0413D81DB4DCDB2D796AA /* RSADataSigner.m in Sources */,
 				9121B650B5514D71930B9E4E /* openssl_wrapper.m in Sources */,
-				0B899955783F44BDB5BDD8FC /* AppDelegate+notification.m in Sources */,
+				81B532AE4BA440239E272FCA /* AppDelegate+notification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
