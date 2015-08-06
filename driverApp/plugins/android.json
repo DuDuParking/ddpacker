@@ -45,10 +45,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"org.apache.cordova.launchnavigator.LaunchNavigator\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<preference name=\"partner\" value=\"2088812264045844\" />",
                             "count": 1
                         },
@@ -66,6 +62,10 @@
                         },
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.dudu.gexin.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"org.apache.cordova.launchnavigator.LaunchNavigator\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -200,9 +200,6 @@
         "cordova-plugin-appavailability": {
             "PACKAGE_NAME": "com.parking.driverApp"
         },
-        "cordova-plugins-launchnavigator": {
-            "PACKAGE_NAME": "com.parking.driverApp"
-        },
         "wang.imchao.plugin.alipay": {
             "PARTNER_ID": "2088812264045844",
             "SELLER_ACCOUNT": "duduparking@163.com",
@@ -210,6 +207,9 @@
             "PACKAGE_NAME": "com.parking.driverApp"
         },
         "org.apache.cordova.dudu.gexin": {
+            "PACKAGE_NAME": "com.parking.driverApp"
+        },
+        "cordova-plugins-launchnavigator": {
             "PACKAGE_NAME": "com.parking.driverApp"
         }
     },

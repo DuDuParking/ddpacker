@@ -55,15 +55,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugins-launchnavigator": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ryunhe/cordova-plugin-launchnavigator.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "wang.imchao.plugin.alipay": {
         "source": {
             "type": "git",
@@ -81,6 +72,15 @@
         "source": {
             "type": "local",
             "path": "/Users/ryun/Desktop/org.apache.cordova.dudu.gexin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugins-launchnavigator": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ryunhe/cordova-plugin-launchnavigator.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

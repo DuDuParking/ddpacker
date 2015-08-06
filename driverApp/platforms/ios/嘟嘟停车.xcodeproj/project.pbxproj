@@ -71,6 +71,7 @@
 		E0A296EDF1284512951929CB /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CD07B6515491D9F9602B6 /* DataSigner.m */; };
 		F72639F3268545D188BEF716 /* AppDelegate+UmengAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D401762C48B5986A18B0 /* AppDelegate+UmengAnalytics.m */; };
 		81B532AE4BA440239E272FCA /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */; };
+		9ACEDFB1ECAB4AA3B6082483 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C163E4FB34326B1F214BA /* LaunchNavigator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,8 @@
 		FC67604D29BC457AA3767EE9 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
 		8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		E4EEC22B352A41DEBEBC295E /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "org.apache.cordova.dudu.gexin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		599C163E4FB34326B1F214BA /* LaunchNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LaunchNavigator.m"; path = "cordova-plugins-launchnavigator/LaunchNavigator.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		70196B78E244439DBE5A7F8D /* LaunchNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LaunchNavigator.h"; path = "cordova-plugins-launchnavigator/LaunchNavigator.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +366,8 @@
 				F2E0145B6BEC4B0AA1EC1988 /* openssl_wrapper.h */,
 				8DDC32441266454FAD79BA81 /* AppDelegate+notification.m */,
 				E4EEC22B352A41DEBEBC295E /* AppDelegate+notification.h */,
+				599C163E4FB34326B1F214BA /* LaunchNavigator.m */,
+				70196B78E244439DBE5A7F8D /* LaunchNavigator.h */,
 			);
 			name = Plugins;
 			path = "嘟嘟停车/Plugins";
@@ -581,6 +586,7 @@
 				8AC0413D81DB4DCDB2D796AA /* RSADataSigner.m in Sources */,
 				9121B650B5514D71930B9E4E /* openssl_wrapper.m in Sources */,
 				81B532AE4BA440239E272FCA /* AppDelegate+notification.m in Sources */,
+				9ACEDFB1ECAB4AA3B6082483 /* LaunchNavigator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
